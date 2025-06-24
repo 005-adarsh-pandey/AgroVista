@@ -1,0 +1,7 @@
+Acres of Land,Type of Crop,Rainfall in month,Soil Quality Index,Irrigation No. of times,No. of Days with fog and dew in no or less sunlight,Seed used in ton,Rate of Seed/Ton,Irrigation cost in thousand,Labor in thousand,Others,Production in tons
+5,2,2,0.5,3,5,1.5,7000,30,20,50000,30
+6,1,3,0.8,4,7,2.0,7500,40,30,40000,60
+4,3,5,0.6,2,6,1.3,7200,20,10,25000,48
+3,2,4,0.4,1,3,1.0,6800,15,8,15000,21
+9,1,1,0.7,2,5,2.5,8000,25,35,30000,151
+2,3,3,0.5,3,4,1.2,7000,20,12,10000,10
