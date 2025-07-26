@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AgroVista - Predictor</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <style>
+     body {
+      background: url("{{ url_for('static', filename='predictor-backg.jpeg') }}") no-repeat center center fixed;
+      background-size: cover;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 1.5rem;
+      padding: 2.5rem;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .input-field {
+      padding: 0.75rem;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 0.75rem;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.6);
+      color: #1a202c;
+    }
+    .input-field::placeholder {
+      color: #4a5568;
+    }
+  </style>
+</head>
+<body class="font-sans text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="bg-green-900 py-4 shadow-md w-full">
+    <div class="flex justify-between items-center px-4 w-full">
+      <h1 class="text-2xl font-bold text-white">🌱 AgroVista</h1>
+      <!-- Hamburger Icon (Mobile) -->
+      <button id="menu-btn" class="md:hidden text-white text-3xl focus:outline-none" aria-label="Open menu">
+        &#9776;
+      </button>
+      <!-- Menu List (Desktop) -->
+      <ul id="menu-list" class="hidden md:flex space-x-8 text-lg text-white md:static absolute right-0 top-16 bg-green-900 md:bg-transparent w-full md:w-auto flex-col md:flex-row md:items-center z-50">
+        <li class="px-4 py-2 md:p-0"><a href="{{ url_for('home') }}" class="hover:text-green-200">Home</a></li>
+        <li class="px-4 py-2 md:p-0"><a href="{{ url_for('market') }}" class="hover:text-green-200">Market</a></li>
+        <li class="px-4 py-2 md:p-0"><a href="{{ url_for('weather') }}" class="hover:text-green-200">Weather</a></li>
+        <li class="px-4 py-2 md:p-0"><a href="{{ url_for('projects2') }}" class="hover:text-green-200">Projects</a></li>
+        <li class="px-4 py-2 md:p-0">
+          <button id="contact-btn" class="hover:text-green-200">Contact</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Slide-in Menu Panel (Mobile, with icons) -->
+  <div id="menuPanel" class="fixed top-6 right-2 h-auto min-h-[220px] w-48 bg-green-900 rounded-xl shadow-2xl z-50 hidden flex flex-col transition-transform duration-300">
+    <button id="closeMenuPanel" class="absolute top-2 right-3 text-green-100 hover:text-green-300 text-xl" aria-label="Close menu">&times;</button>
+    <nav class="mt-10 flex flex-col space-y-4 px-6 pb-6">
+      <a href="{{ url_for('home') }}" class="flex items-center text-white font-semibold hover:text-green-200">
+        <span class="mr-2">🏠</span> Home
+      </a>
+      <a href="{{ url_for('market') }}" class="flex items-center text-white font-semibold hover:text-green-200">
+        <span class="mr-2">🛒</span> Market
+      </a>
+      <a href="{{ url_for('weather') }}" class="flex items-center text-white font-semibold hover:text-green-200">
+        <span class="mr-2">☁️</span> Weather
+      </a>
+      <a href="{{ url_for('projects2') }}" class="flex items-center text-white font-semibold hover:text-green-200">
+        <span class="mr-2">📁</span> Projects
+      </a>
+      <button id="contact-btn-mobile" class="flex items-center text-white font-semibold hover:text-green-200 text-left">
+        <span class="mr-2">📞</span> Contact
+      </button>
+    </nav>
+  </div>
+
+  <!-- 📞 CONTACT MODAL (centered, theme-matching) -->
+  <div id="contactModal" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 hidden">
+    <div class="bg-green-50 rounded-2xl shadow-lg p-6 max-w-md w-full relative border-t-8 border-green-900">
+      <button id="closeContactModal" class="absolute top-2 right-3 text-green-900 hover:text-green-700 text-xl">&times;</button>
+      <h2 class="text-2xl font-bold text-green-900 mb-4 mt-2">📞 Contact Us</h2>
+      <p><strong class="text-green-900">Email:</strong> <a href="mailto:abhinavpan2004@gmail.com" class="text-green-700 underline">abhinavpan2004@gmail.com</a></p>
+      <p><strong class="text-green-900">Phone:</strong> <a href="tel:+917697990750" class="text-green-700 underline">+91 7697990750</a></p>
+      <p class="mt-4"><strong class="text-green-900">LinkedIn:</strong> <a href="https://www.linkedin.com/in/adarsh-pandey-nitt" target="_blank" class="text-green-700 underline">Adarsh Pandey</a></p>
+      <p><strong class="text-green-900">GitHub:</strong> <a href="https://github.com/005-adarsh-pandey" target="_blank" class="text-green-700 underline">005-adarsh-pandey</a></p>
+    </div>
+  </div>
+
+  <!-- Main Card -->
+  <div class="flex-grow">
+    <div class="max-w-5xl mx-auto mt-16 mb-20">
+      <div class="glass-card">
+        <h2 class="text-3xl font-bold text-center text-green-700 mb-6">🌾 Crop Yield Predictor</h2>
+        
+        <!-- Stage 1: Location Selection -->
+        <div id="stage1" class="space-y-5">
+          <h3 class="text-xl font-semibold text-center text-green-600 mb-4">📍 Step 1: Select Your Location</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <select id="state-select" required class="input-field">
+              <option value="">-- Select State --</option>
+            </select>
+            <select id="city-select" required disabled class="input-field">
+              <option value="">-- Select City --</option>
+            </select>
+          </div>
+          <!-- Hidden inputs for coordinates -->
+          <input type="hidden" id="city-name">
+          <input type="hidden" id="latitude">
+          <input type="hidden" id="longitude">
+          <input type="hidden" id="selected-state-name">
+          
+          <div class="text-center mt-8">
+            <button id="proceedBtn" type="button" disabled class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg text-lg font-semibold shadow-md disabled:bg-gray-400 disabled:cursor-not-allowed">Proceed to Crop Data</button>
+          </div>
+        </div>
+
+        <!-- Stage 2: Crop Data Input -->
+        <div id="stage2" class="space-y-5 hidden">
+          <h3 class="text-xl font-semibold text-center text-green-600 mb-4">🌾 Step 2: Enter Crop Details</h3>
+          <div id="locationInfo" class="bg-green-100 p-4 rounded-lg mb-6">
+            <p class="text-green-800 font-semibold">📍 Selected Location: <span id="selectedLocation"></span></p>
+            <p class="text-green-700">🌧️ Fetching weather data...</p>
+          </div>
+          
+          <form id="cropForm" class="space-y-5">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <!-- Main crop inputs -->
+              <input type="number" name="area" step="0.1" placeholder="Area (in acres)" class="input-field" required id="area-input">
+              <select name="crop" class="input-field" required>
+                <option value="">-- Select Crop --</option>
+                <option value="Wheat">Wheat</option>
+                <option value="Rice">Rice</option>
+                <option value="Maize">Maize</option>
+                <option value="Sugarcane">Sugarcane</option>
+                <option value="Cotton">Cotton</option>
+                <option value="Jute">Jute</option>
+                <option value="Bajra">Bajra</option>
+                <option value="Jowar">Jowar</option>
+                <option value="Ragi">Ragi</option>
+                <option value="Gram">Gram</option>
+                <option value="Arhar/Tur">Arhar/Tur</option>
+                <option value="Moong(Green Gram)">Moong(Green Gram)</option>
+                <option value="Urad">Urad</option>
+                <option value="Masoor">Masoor</option>
+                <option value="Groundnut">Groundnut</option>
+                <option value="Sunflower">Sunflower</option>
+                <option value="Safflower">Safflower</option>
+                <option value="Soyabean">Soyabean</option>
+                <option value="Sesamum">Sesamum</option>
+                <option value="Castor seed">Castor seed</option>
+                <option value="Coconut">Coconut</option>
+                <option value="Dry chillies">Dry chillies</option>
+                <option value="Coriander">Coriander</option>
+                <option value="Turmeric">Turmeric</option>
+                <option value="Black pepper">Black pepper</option>
+                <option value="Cardamom">Cardamom</option>
+                <option value="Ginger">Ginger</option>
+                <option value="Garlic">Garlic</option>
+                <option value="Onion">Onion</option>
+                <option value="Potato">Potato</option>
+                <option value="Sweet potato">Sweet potato</option>
+                <option value="Tapioca">Tapioca</option>
+                <option value="Banana">Banana</option>
+                <option value="Papaya">Papaya</option>
+                <option value="Orange">Orange</option>
+                <option value="Apple">Apple</option>
+                <option value="Mango">Mango</option>
+                <option value="Grapes">Grapes</option>
+                <option value="Pomegranate">Pomegranate</option>
+              </select>
+              
+              <select name="season" class="input-field" required>
+                <option value="">-- Select Season --</option>
+                <option value="Kharif">Kharif (Monsoon)</option>
+                <option value="Rabi">Rabi (Winter)</option>
+                <option value="Summer">Summer</option>
+                <option value="Whole Year">Whole Year</option>
+              </select>
+              
+              <select id="district-select" name="district" class="input-field" required>
+                <option value="">-- Select District --</option>
+              </select>
+              
+              <input type="number" name="crop_year" placeholder="Crop Year (e.g., 2025)" class="input-field" required min="2000" max="2030" value="2025">
+            </div>
+            
+            <!-- Hidden fields for model -->
+            <input type="hidden" name="state_name" id="final-state-name">
+            <input type="hidden" name="district_coords" id="district-coords">
+            <input type="hidden" name="rainfall_data" id="rainfall-data">
+            <input type="hidden" name="prev_rainfall" id="prev-rainfall">
+            
+            <div class="text-center mt-8">
+              <button type="button" id="backBtn" class="bg-gray-500 hover:bg-gray-600 text-white px-6 py-3 rounded-lg text-lg font-semibold shadow-md mr-4">Back</button>
+              <button type="submit" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg text-lg font-semibold shadow-md">Predict Production</button>
+            </div>
+          </form>
+        </div>
+        
+        <!-- Results -->
+        <div id="result" class="mt-10 hidden">
+          <h3 class="text-xl font-semibold text-center text-green-700 mb-4">📊 Prediction Results</h3>
+          <div class="bg-green-50 p-6 rounded-lg">
+            <p id="prediction-details" class="text-lg text-green-800 mb-4"></p>
+            <p id="production-result" class="text-2xl font-bold text-green-900"></p>
+            <div class="mt-4 p-4 bg-blue-50 rounded">
+              <p class="text-blue-800 text-sm">
+                <strong>Note:</strong> This prediction is based on historical data and weather patterns. 
+                Actual production may vary due to various factors including soil conditions, 
+                farming practices, and unexpected weather events.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer (full width, theme color) -->
+  <footer class="bg-green-900 text-white text-center p-6 mt-20 w-full">
+    <p>Made with ❤️ by AgroVista Team</p>
+    <p>Contact: 
+      <a href="mailto:abhinavpan2004@gmail.com" class="underline">abhinavpan2004@gmail.com</a> | 
+      <a href="tel:+917697990750" class="underline">+91 7697990750</a>
+    </p>
+    <div class="flex justify-center space-x-6 mt-4">
+      <a href="https://www.linkedin.com/in/adarsh-pandey-nitt" target="_blank">
+        <img src="https://logos-world.net/wp-content/uploads/2020/06/Linkedin-Logo-2003-700x394.png" alt="LinkedIn" class="h-10">
+      </a>
+      <a href="https://github.com/005-adarsh-pandey" target="_blank">
+        <img src="https://pngimg.com/uploads/github/github_PNG65.png" alt="GitHub" class="h-10">
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    // State mapping from weather.html
+    const stateMap = {
+      "01": "Jammu and Kashmir", "02": "Himachal Pradesh", "03": "Punjab", "04": "Chandigarh",
+      "05": "Uttarakhand", "06": "Haryana", "07": "Delhi", "08": "Rajasthan", "09": "Uttar Pradesh",
+      "10": "Bihar", "11": "Sikkim", "12": "Arunachal Pradesh", "13": "Nagaland", "14": "Meghalaya",
+      "15": "Mizoram", "16": "Tripura", "17": "Manipur", "18": "Assam", "19": "West Bengal",
+      "20": "Jharkhand", "21": "Odisha", "22": "Chhattisgarh", "23": "Madhya Pradesh",
+      "24": "Gujarat", "25": "Dadra and Nagar Haveli and Daman and Diu", "26": "Maharashtra",
+      "27": "Andhra Pradesh", "28": "Karnataka", "29": "Goa", "30": "Lakshadweep", "31": "Kerala",
+      "32": "Tamil Nadu", "33": "Puducherry","34": "Andaman and Nicobar Islands", "35": "Ladakh", "36": "Telangana"
+    };
+
+    let allPlaces = [];
+
+    // Load places data
+    async function loadData() {
+      try {
+        // Load cities from existing API
+        const placesRes = await fetch('/api/places');
+        allPlaces = await placesRes.json();
+
+        populateStateDropdown();
+        
+      } catch (error) {
+        console.error('Error loading data:', error);
+      }
+    }
+
+    function populateStateDropdown() {
+      const stateSelect = document.getElementById('state-select');
+      
+      // Clear existing options first
+      stateSelect.innerHTML = '<option value="">-- Select State --</option>';
+      
+      const states = [...new Set(allPlaces.map(p => p.state_code))].sort((a, b) =>
+        (stateMap[a] || '').localeCompare(stateMap[b] || '')
+      );
+
+      states.forEach(code => {
+        const opt = new Option(stateMap[code] || `State ${code}`, code);
+        stateSelect.appendChild(opt);
+      });
+
+      stateSelect.addEventListener('change', populateCityDropdown);
+    }
+
+    async function populateDistrictDropdown(stateName) {
+      console.log('populateDistrictDropdown called with stateName:', stateName); // Debug
+      
+      const districtSelect = document.getElementById('district-select');
+      districtSelect.innerHTML = '<option value="">-- Loading districts... --</option>';
+      districtSelect.disabled = true;
+      
+      try {
+        // Make sure we're using the state name (not code)
+        const url = `/api/districts?state=${encodeURIComponent(stateName)}`;
+        console.log('Fetching districts from URL:', url); // Debug
+        
+        const response = await fetch(url);
+        console.log('Districts API response status:', response.status); // Debug
+        
+        if (response.ok) {
+          const data = await response.json();
+          console.log('Districts data received:', data); // Debug
+          
+          const districts = data.districts || [];
+          
+          districtSelect.innerHTML = '<option value="">-- Select District --</option>';
+          
+          districts.forEach(district => {
+            const option = new Option(district, district);
+            districtSelect.appendChild(option);
+          });
+          
+          if (districts.length === 0) {
+            const option = new Option('No districts available for this state', '');
+            option.disabled = true;
+            districtSelect.appendChild(option);
+          } else {
+            console.log(`Loaded ${districts.length} districts for ${stateName}`); // Debug
+          }
+          
+          districtSelect.disabled = false;
+        } else {
+          console.error('Failed to fetch districts, status:', response.status);
+          const errorText = await response.text();
+          console.error('Error response:', errorText);
+          districtSelect.innerHTML = '<option value="">-- Error loading districts --</option>';
+        }
+      } catch (error) {
+        console.error('Error fetching districts:', error);
+        districtSelect.innerHTML = '<option value="">-- Error loading districts --</option>';
+      }
+    }
+
+    function populateCityDropdown() {
+      const stateSelect = document.getElementById('state-select');
+      const citySelect = document.getElementById('city-select');
+      const proceedBtn = document.getElementById('proceedBtn');
+      
+      const selectedState = stateSelect.value;
+      const stateName = stateMap[selectedState] || '';
+      
+      // Clear district dropdown when state changes
+      const districtSelect = document.getElementById('district-select');
+      districtSelect.innerHTML = '<option value="">-- Select District --</option>';
+      districtSelect.disabled = true;
+      
+      // Also update the hidden state name field right away
+      document.getElementById('selected-state-name').value = stateName;
+      
+      const cities = allPlaces
+        .filter(p => p.state_code === selectedState)
+        .sort((a, b) => a.city.localeCompare(b.city));
+
+      citySelect.innerHTML = '<option value="">-- Select City --</option>';
+      cities.forEach(city => {
+        const opt = new Option(city.city, city.city);
+        opt.dataset.lat = city.lat;
+        opt.dataset.lon = city.lon;
+        opt.dataset.state = city.state_code;
+        citySelect.appendChild(opt);
+      });
+
+      citySelect.disabled = cities.length === 0;
+      proceedBtn.disabled = true;
+
+      citySelect.addEventListener('change', cityChangeHandler);
+    }
+
+    // Separate function for city change handling
+    function cityChangeHandler() {
+      const citySelect = document.getElementById('city-select');
+      const selected = citySelect.options[citySelect.selectedIndex];
+      const proceedBtn = document.getElementById('proceedBtn');
+      
+      if (selected.value) {
+        document.getElementById('latitude').value = selected.dataset.lat || '';
+        document.getElementById('longitude').value = selected.dataset.lon || '';
+        document.getElementById('city-name').value = selected.value || '';
+        document.getElementById('selected-state-name').value = stateMap[selected.dataset.state] || '';
+        proceedBtn.disabled = false;
+      } else {
+        proceedBtn.disabled = true;
+      }
+    }
+
+    // Stage navigation
+    document.getElementById('proceedBtn').addEventListener('click', async function() {
+      const city = document.getElementById('city-name').value;
+      const stateName = document.getElementById('selected-state-name').value;
+      const lat = document.getElementById('latitude').value;
+      const lon = document.getElementById('longitude').value;
+      
+      if (!city || !stateName) {
+        alert('Please select both state and city');
+        return;
+      }
+
+      console.log('Loading districts for state:', stateName); // Debug log
+
+      // Show stage 2
+      document.getElementById('stage1').classList.add('hidden');
+      document.getElementById('stage2').classList.remove('hidden');
+      
+      // Update location info
+      document.getElementById('selectedLocation').textContent = `${city}, ${stateName}`;
+      document.getElementById('final-state-name').value = stateName;
+      
+      // Populate districts for selected state (using the actual state name)
+      await populateDistrictDropdown(stateName);
+      
+      // Fetch weather data
+      await fetchWeatherData(city, lat, lon, stateName);
+      
+      // Scroll to stage 2
+      document.getElementById('stage2').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    document.getElementById('backBtn').addEventListener('click', function() {
+      // Simple solution: refresh the page to reset everything
+      location.reload();
+    });
+
+    async function fetchWeatherData(city, lat, lon, stateName) {
+      const locationInfo = document.getElementById('locationInfo');
+      try {
+        console.log(`🌤️ Pre-fetching weather data for ${city}, ${stateName}`);
+        console.log(`   📍 Coordinates: (${lat}, ${lon})`);
+        
+        // Fetch current/future weather data using CDS API
+        const weatherRes = await fetch('/api/weather-data', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ 
+            city: city, 
+            state: stateName,
+            latitude: lat, 
+            longitude: lon 
+          })
+        });
+        
+        if (weatherRes.ok) {
+          const weatherData = await weatherRes.json();
+          console.log('✅ Weather data pre-fetched:', weatherData);
+          
+          if (weatherData.success) {
+            locationInfo.innerHTML = `
+              <p class="text-green-800 font-semibold">📍 Selected Location: ${city}, ${stateName}</p>
+              <p class="text-green-700">🌧️ Weather data cached successfully</p>
+              <p class="text-green-600 text-sm">🌧️ Total rainfall: ${weatherData.rainfall_forecast.toFixed(1)} mm</p>
+            `;
+          } else {
+            locationInfo.innerHTML = `
+              <p class="text-green-800 font-semibold">📍 Selected Location: ${city}, ${stateName}</p>
+              <p class="text-yellow-600">⚠️ Weather data fetch failed, will use fallback</p>
+            `;
+          }
+        } else {
+          throw new Error('Weather API request failed');
+        }
+
+        // Fetch previous year rainfall data
+        const prevRainfallRes = await fetch('/api/previous-rainfall', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ 
+            district: city, 
+            state: stateName,
+            year: new Date().getFullYear() - 1 
+          })
+        });
+        
+        if (prevRainfallRes.ok) {
+          const prevData = await prevRainfallRes.json();
+          document.getElementById('prev-rainfall').value = JSON.stringify(prevData);
+        }
+        
+      } catch (error) {
+        console.error('❌ Error fetching weather data:', error);
+        locationInfo.innerHTML = `
+          <p class="text-green-800 font-semibold">📍 Selected Location: ${city}, ${stateName}</p>
+          <p class="text-red-600">⚠️ Weather data fetch failed, using default values</p>
+        `;
+      }
+    }
+
+    // Hamburger menu toggle for mobile
+    document.getElementById('menu-btn').onclick = function() {
+      document.getElementById('menuPanel').classList.toggle('hidden');
+    };
+    document.getElementById('closeMenuPanel').onclick = function() {
+      document.getElementById('menuPanel').classList.add('hidden');
+    };
+
+    // Contact modal toggle (desktop)
+    document.getElementById('contact-btn').onclick = function() {
+      document.getElementById('contactModal').classList.toggle('hidden');
+    };
+    // Contact modal toggle (mobile)
+    document.getElementById('contact-btn-mobile').onclick = function() {
+      document.getElementById('contactModal').classList.toggle('hidden');
+      document.getElementById('menuPanel').classList.add('hidden');
+    };
+    // Close contact modal
+    document.getElementById('closeContactModal').onclick = function() {
+      document.getElementById('contactModal').classList.add('hidden');
+    };
+
+    // Crop yield prediction form handler
+    document.getElementById('cropForm').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const formData = new FormData(this);
+      const data = Object.fromEntries(formData.entries());
+      
+      // Convert area from acres to hectares (1 acre = 0.404686 hectares)
+      const areaInAcres = parseFloat(data.area);
+      const areaInHectares = areaInAcres * 0.404686;
+      data.area = areaInHectares.toFixed(4); // Store as hectares for model
+      
+      // Use city coordinates (already selected by user) for weather data
+      // This gives more accurate weather data while keeping district for ML model compatibility
+      const cityLat = parseFloat(document.getElementById('latitude').value);
+      const cityLon = parseFloat(document.getElementById('longitude').value);
+      const cityName = document.getElementById('city-name').value;
+      
+      if (cityLat && cityLon) {
+        // Send city coordinates for weather data
+        data.latitude = cityLat;
+        data.longitude = cityLon;
+        data.city_name = cityName;
+        console.log(`✅ Using CITY coordinates for weather: (${cityLat}, ${cityLon}) from ${cityName}`);
+        console.log(`📊 District ${data.district} will be used for ML model compatibility`);
+      } else {
+        // Fallback to district coordinates if city coordinates are not available
+        try {
+          console.log(`Fetching district coordinates for ${data.district}, ${data.state_name}`);
+          const coordsRes = await fetch(`/api/coordinates?state=${encodeURIComponent(data.state_name)}&district=${encodeURIComponent(data.district)}`);
+          
+          if (coordsRes.ok) {
+            const coordsData = await coordsRes.json();
+            data.latitude = coordsData.latitude;
+            data.longitude = coordsData.longitude;
+            console.log(`⚠️ Using district coordinates as fallback: (${coordsData.latitude}, ${coordsData.longitude}) for ${data.district}, ${data.state_name}`);
+          } else {
+            console.log('⚠️ Coordinates not found, using default values');
+            data.latitude = 26.8467;  // Default for India center
+            data.longitude = 80.9462;
+          }
+        } catch (e) {
+          console.log('❌ Error fetching coordinates, using default values:', e);
+          data.latitude = 26.8467;
+          data.longitude = 80.9462;
+        }
+      }
+
+      try {
+        const res = await fetch('/predict-crop', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+
+        const result = await res.json();
+        
+        if (res.ok) {
+          // Convert production to tons and quintals
+          const productionInTons = result.predicted_production || 0;
+          const productionInQuintals = productionInTons * 10; // 1 ton = 10 quintals
+          const productionPerAcre = productionInTons / areaInAcres; // tons per acre
+          const quintalsPerAcre = productionPerAcre * 10; // quintals per acre
+          
+          document.getElementById('result').classList.remove('hidden');
+          document.getElementById('prediction-details').textContent = 
+            `Crop: ${data.crop} | Area: ${areaInAcres} acres (${areaInHectares.toFixed(2)} hectares) | Season: ${data.season} | District: ${data.district}`;
+          
+          document.getElementById('production-result').innerHTML = 
+            `🌾 <strong>Predicted Production</strong><br>
+            📊 <strong>Total: ${productionInTons.toFixed(2)} tons (${productionInQuintals.toFixed(1)} quintals)</strong><br>
+            📈 <strong>Per Acre: ${productionPerAcre.toFixed(3)} tons/acre (${quintalsPerAcre.toFixed(1)} quintals/acre)</strong><br>
+            <small class="text-gray-600">💡 Note: 1 ton = 1000 kg = 10 quintals | 1 quintal = 100 kg</small>`;
+          
+          // Add weather forecast section
+          await displayWeatherForecast(data.district, data.state_name, data.crop, data.season, data.area);
+          
+          // Add profit calculation section
+          await displayProfitCalculation(data.crop, data.state_name, data.district, productionInQuintals, areaInAcres);
+          
+          // Scroll to results
+          document.getElementById('result').scrollIntoView({ behavior: 'smooth' });
+        } else {
+          alert(`Error: ${result.error || 'Prediction failed'}`);
+        }
+      } catch (error) {
+        console.error('Prediction error:', error);
+        alert('Failed to get prediction. Please try again.');
+      }
+    });
+
+    // Function to display profit calculation
+    async function displayProfitCalculation(crop, state, district, productionInQuintals, areaInAcres) {
+      const profitContainer = document.getElementById('profit-calculation');
+      if (!profitContainer) {
+        // Create profit calculation container if it doesn't exist
+        const resultDiv = document.getElementById('result');
+        const profitDiv = document.createElement('div');
+        profitDiv.id = 'profit-calculation';
+        profitDiv.className = 'mt-6 p-4 bg-green-50 rounded-lg';
+        resultDiv.appendChild(profitDiv);
+      }
+      
+      try {
+        // Show loading state
+        document.getElementById('profit-calculation').innerHTML = `
+          <h4 class="text-lg font-semibold text-green-800 mb-3">💰 Profit Analysis</h4>
+          <div class="flex items-center justify-center p-4">
+            <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-green-500"></div>
+            <span class="ml-2 text-gray-600">Fetching price data...</span>
+          </div>
+        `;
+        
+        const response = await fetch('/api/price-data', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            crop: crop,
+            state: state,
+            district: district
+          })
+        });
+        
+        if (response.ok) {
+          const priceData = await response.json();
+          
+          let profitHTML = `
+            <h4 class="text-lg font-semibold text-green-800 mb-3">💰 Profit Analysis for ${crop}</h4>
+            <div class="bg-white p-4 rounded-lg shadow-md">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                <div class="text-center p-3 bg-blue-50 rounded-lg">
+                  <h5 class="font-semibold text-blue-700">Production</h5>
+                  <p class="text-xl font-bold text-blue-800">${productionInQuintals.toFixed(1)} quintals</p>
+                  <p class="text-sm text-gray-600">from ${areaInAcres.toFixed(1)} acres</p>
+                </div>
+                <div class="text-center p-3 bg-yellow-50 rounded-lg">
+                  <h5 class="font-semibold text-yellow-700">Yield per Acre</h5>
+                  <p class="text-xl font-bold text-yellow-800">${(productionInQuintals / areaInAcres).toFixed(1)} quintals/acre</p>
+                  <p class="text-sm text-gray-600">Industry standard varies by crop</p>
+                </div>
+              </div>
+          `;
+          
+          // Price information section
+          profitHTML += '<div class="border-t pt-4">';
+          
+          if (priceData.msp_available || priceData.market_available) {
+            profitHTML += '<h5 class="font-semibold text-green-700 mb-3">💲 Price Information</h5>';
+            profitHTML += '<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">';
+            
+            // MSP Price
+            if (priceData.msp_available) {
+              const mspRevenue = productionInQuintals * priceData.msp_price;
+              const mspYear = priceData.msp_year ? ` (${priceData.msp_year})` : '';
+              const mspSource = priceData.msp_source || 'Government MSP';
+              const isEstimated = mspSource.toLowerCase().includes('estimated');
+              const sourceText = isEstimated ? 'Estimated MSP' : 'Government MSP';
+              const sourceColor = isEstimated ? 'text-yellow-600' : 'text-green-600';
+              
+              profitHTML += `
+                <div class="p-3 bg-green-50 rounded-lg border border-green-200">
+                  <h6 class="font-semibold text-green-700">🏛️ MSP (Govt. Support Price)${mspYear}</h6>
+                  <p class="text-lg font-bold text-green-800">₹${priceData.msp_price.toLocaleString()} per quintal</p>
+                  <p class="text-sm text-gray-600">Total Revenue: ₹${mspRevenue.toLocaleString('en-IN', {maximumFractionDigits: 0})}</p>
+                  <p class="text-xs ${sourceColor}">${sourceText}</p>
+                  ${isEstimated ? '<p class="text-xs text-yellow-500">Based on latest available data</p>' : ''}
+                </div>
+              `;
+            } else {
+              profitHTML += `
+                <div class="p-3 bg-gray-100 rounded-lg border border-gray-200">
+                  <h6 class="font-semibold text-gray-600">🏛️ MSP (Govt. Support Price)</h6>
+                  <p class="text-sm text-gray-500">Not available for ${crop}</p>
+                </div>
+              `;
+            }
+            
+            // Market Price
+            if (priceData.market_available) {
+              const marketRevenue = productionInQuintals * priceData.market_price;
+              profitHTML += `
+                <div class="p-3 bg-blue-50 rounded-lg border border-blue-200">
+                  <h6 class="font-semibold text-blue-700">🏪 Market Price (Current)</h6>
+                  <p class="text-lg font-bold text-blue-800">₹${priceData.market_price.toLocaleString()} per quintal</p>
+                  <p class="text-sm text-gray-600">Total Revenue: ₹${marketRevenue.toLocaleString('en-IN', {maximumFractionDigits: 0})}</p>
+                  <p class="text-xs text-blue-600">Based on current mandi prices</p>
+                </div>
+              `;
+            } else {
+              profitHTML += `
+                <div class="p-3 bg-gray-100 rounded-lg border border-gray-200">
+                  <h6 class="font-semibold text-gray-600">🏪 Market Price (Current)</h6>
+                  <p class="text-sm text-gray-500">No current data for ${district}, ${state}</p>
+                </div>
+              `;
+            }
+            
+            profitHTML += '</div>';
+            
+            // Profit Calculation
+            if (priceData.msp_available || priceData.market_available) {
+              profitHTML += '<div class="border-t pt-4">';
+              profitHTML += '<h5 class="font-semibold text-green-700 mb-3">📊 Revenue Analysis</h5>';
+              
+              // Determine best price
+              let bestPrice = 0;
+              let bestPriceType = '';
+              
+              if (priceData.msp_available && priceData.market_available) {
+                if (priceData.market_price > priceData.msp_price) {
+                  bestPrice = priceData.market_price;
+                  bestPriceType = 'Market Price (Higher than MSP)';
+                } else {
+                  bestPrice = priceData.msp_price;
+                  bestPriceType = 'MSP (Better than Market)';
+                }
+              } else if (priceData.msp_available) {
+                bestPrice = priceData.msp_price;
+                bestPriceType = 'MSP (Government Support)';
+              } else if (priceData.market_available) {
+                bestPrice = priceData.market_price;
+                bestPriceType = 'Market Price';
+              }
+              
+              if (bestPrice > 0) {
+                const totalRevenue = productionInQuintals * bestPrice;
+                const revenuePerAcre = totalRevenue / areaInAcres;
+                
+                profitHTML += `
+                  <div class="bg-gradient-to-r from-green-100 to-blue-100 p-4 rounded-lg border-2 border-green-300">
+                    <h6 class="font-bold text-green-800 mb-2">🎯 Best Revenue Option: ${bestPriceType}</h6>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                      <div>
+                        <p class="text-sm text-gray-600">Price per Quintal</p>
+                        <p class="text-xl font-bold text-green-700">₹${bestPrice.toLocaleString()}</p>
+                      </div>
+                      <div>
+                        <p class="text-sm text-gray-600">Total Revenue</p>
+                        <p class="text-xl font-bold text-green-700">₹${totalRevenue.toLocaleString('en-IN', {maximumFractionDigits: 0})}</p>
+                      </div>
+                      <div>
+                        <p class="text-sm text-gray-600">Revenue per Acre</p>
+                        <p class="text-xl font-bold text-green-700">₹${revenuePerAcre.toLocaleString('en-IN', {maximumFractionDigits: 0})}</p>
+                      </div>
+                    </div>
+                  </div>
+                `;
+                
+                // Add cost estimation note
+                profitHTML += `
+                  <div class="mt-4 p-3 bg-yellow-50 rounded-lg border border-yellow-200">
+                    <p class="text-sm text-yellow-800">
+                      <strong>💡 Note:</strong> This shows gross revenue only. Net profit = Revenue - (Seeds + Fertilizer + Labor + Equipment + Other costs).
+                      Typical farming costs vary from ₹15,000-₹40,000 per acre depending on crop and region.
+                    </p>
+                    <details class="mt-2">
+                      <summary class="cursor-pointer text-sm font-medium text-yellow-700">📊 Typical Cost Breakdown (per acre)</summary>
+                      <div class="mt-2 text-xs text-gray-700 grid grid-cols-2 gap-2">
+                        <div>• Seeds: ₹2,000-₹5,000</div>
+                        <div>• Fertilizer: ₹3,000-₹8,000</div>
+                        <div>• Pesticides: ₹1,000-₹3,000</div>
+                        <div>• Labor: ₹5,000-₹12,000</div>
+                        <div>• Equipment/Rent: ₹2,000-₹6,000</div>
+                        <div>• Other: ₹2,000-₹6,000</div>
+                      </div>
+                    </details>
+                  </div>
+                `;
+              }
+              
+              profitHTML += '</div>';
+            }
+            
+          } else {
+            profitHTML += `
+              <div class="text-center p-6 bg-yellow-50 rounded-lg border border-yellow-200">
+                <h5 class="font-semibold text-yellow-700 mb-2">📊 Price Data Not Available</h5>
+                <p class="text-gray-600">
+                  Currently no MSP or market price data available for <strong>${crop}</strong> in <strong>${district}, ${state}</strong>.
+                </p>
+                <p class="text-sm text-gray-500 mt-2">
+                  You can check local mandi prices or contact agricultural extension officers for current rates.
+                </p>
+              </div>
+            `;
+          }
+          
+          profitHTML += '</div></div>';
+          
+          document.getElementById('profit-calculation').innerHTML = profitHTML;
+          
+        } else {
+          throw new Error('Failed to fetch price data');
+        }
+        
+      } catch (error) {
+        console.error('Error fetching price data:', error);
+        document.getElementById('profit-calculation').innerHTML = `
+          <h4 class="text-lg font-semibold text-green-800 mb-3">💰 Profit Analysis</h4>
+          <div class="bg-red-50 p-4 rounded-lg border border-red-200">
+            <p class="text-red-700">
+              <strong>⚠️ Error:</strong> Unable to fetch price data at the moment. Please try again later.
+            </p>
+          </div>
+        `;
+      }
+    }
+
+    // Function to display 6-month weather forecast using real CDS API data
+    async function displayWeatherForecast(district, state, crop, season, area) {
+      const forecastContainer = document.getElementById('weather-forecast');
+      if (!forecastContainer) {
+        // Create weather forecast container if it doesn't exist
+        const resultDiv = document.getElementById('result');
+        const forecastDiv = document.createElement('div');
+        forecastDiv.id = 'weather-forecast';
+        forecastDiv.className = 'mt-6 p-4 bg-blue-50 rounded-lg';
+        forecastDiv.innerHTML = '<h4 class="text-lg font-semibold text-blue-800 mb-3">🌤️ 6-Month Weather Forecast</h4>';
+        resultDiv.appendChild(forecastDiv);
+      }
+      
+      try {
+        // Use city coordinates (already selected by user) for weather forecast
+        // This matches the same logic as the prediction system
+        const cityLat = parseFloat(document.getElementById('latitude').value);
+        const cityLon = parseFloat(document.getElementById('longitude').value);
+        const cityName = document.getElementById('city-name').value;
+        
+        if (!cityLat || !cityLon) {
+          throw new Error('City coordinates not available');
+        }
+        
+        // Map state names to state codes (same as enhanced_ml_inputs.py)
+        const stateCodes = {
+          'ANDHRA PRADESH': '28', 'ASSAM': '18', 'BIHAR': '10', 'CHANDIGARH': '04',
+          'CHHATTISGARH': '22', 'DELHI': '07', 'GOA': '30', 'GUJARAT': '24',
+          'HARYANA': '06', 'HIMACHAL PRADESH': '02', 'JAMMU AND KASHMIR': '01',
+          'JHARKHAND': '20', 'KARNATAKA': '29', 'KERALA': '32', 'MADHYA PRADESH': '23',
+          'MAHARASHTRA': '27', 'MANIPUR': '14', 'MEGHALAYA': '17', 'MIZORAM': '15',
+          'NAGALAND': '13', 'ODISHA': '21', 'PUNJAB': '03', 'RAJASTHAN': '08',
+          'SIKKIM': '11', 'TAMIL NADU': '33', 'TELANGANA': '36', 'TRIPURA': '16',
+          'UTTAR PRADESH': '09', 'UTTARAKHAND': '05', 'WEST BENGAL': '19',
+          'ANDAMAN AND NICOBAR ISLANDS': '35', 'DADRA AND NAGAR HAVELI': '26',
+          'DAMAN AND DIU': '25', 'LAKSHADWEEP': '31', 'PUDUCHERRY': '34'
+        };
+        
+        const stateCode = stateCodes[state.toUpperCase()];
+        if (!stateCode) {
+          throw new Error('State code not found');
+        }
+        
+        console.log(`🌤️ Using CITY coordinates for weather forecast: (${cityLat}, ${cityLon}) from ${cityName}`);
+        console.log(`📊 Same coordinates as used for prediction weather data`);
+        
+        // Get real weather data from the same API as prediction system
+        const weatherResponse = await fetch('/weather/cards-data', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            city: cityName.toLowerCase(),
+            state_code: stateCode,
+            lat: cityLat,
+            lon: cityLon
+          })
+        });
+        
+        if (!weatherResponse.ok) {
+          throw new Error('Failed to fetch weather data');
+        }
+        
+        const weatherData = await weatherResponse.json();
+        
+        console.log('🔍 Weather data received:', weatherData);
+        console.log('🔍 Weather cards:', weatherData.weather_cards);
+        
+        if (weatherData.success && weatherData.weather_cards) {
+          let forecastHTML = '<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">';
+          
+          weatherData.weather_cards.forEach((weather, index) => {
+            console.log(`🔍 Processing card ${index}:`, weather);
+            console.log(`🔍 Card fields: month=${weather.month}, temp=${weather.temperature}, rain=${weather.rainfall}, condition=${weather.condition}`);
+            
+            forecastHTML += `
+              <div class="bg-white p-3 rounded-lg shadow-md">
+                <h5 class="font-semibold text-blue-700">${weather.month}</h5>
+                <p class="text-sm">🌡️ ${weather.temperature}°C</p>
+                <p class="text-sm">🌧️ ${weather.rainfall} mm</p>
+                <p class="text-sm">💧 ${Math.round(weather.rainfall * 0.1 + 40)}%</p>
+                <p class="text-sm text-gray-600">${weather.condition}</p>
+              </div>
+            `;
+          });
+          
+          forecastHTML += '</div>';
+          
+          document.getElementById('weather-forecast').innerHTML = 
+            '<h4 class="text-lg font-semibold text-blue-800 mb-3">🌤️ 6-Month Weather Forecast for ' + cityName + ', ' + state + '</h4>' + 
+            '<p class="text-sm text-gray-600 mb-3">📅 Data source: ' + weatherData.data_source + ' | Reference: ' + weatherData.reference_time + '</p>' +
+            '<p class="text-sm text-blue-600 mb-3">🎯 Using same city coordinates as prediction: (' + cityLat + ', ' + cityLon + ')</p>' +
+            forecastHTML;
+        } else {
+          throw new Error('Invalid weather data received');
+        }
+          
+      } catch (error) {
+        console.error('Error fetching weather forecast:', error);
+        document.getElementById('weather-forecast').innerHTML = 
+          '<h4 class="text-lg font-semibold text-blue-800 mb-3">🌤️ Weather Forecast for ' + district + ', ' + state + '</h4>' +
+          '<div class="bg-yellow-50 p-4 rounded-lg border border-yellow-200">' +
+          '<p class="text-yellow-700">⚠️ Unable to fetch real-time weather data. Please try again later.</p>' +
+          '</div>';
+      }
+    }
+
+    // Initialize on page load
+    window.onload = loadData;
+  </script>
+</body>
+</html>

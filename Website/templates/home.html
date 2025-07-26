@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AgroVista - Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <style>
+    body {
+      background: url("{{ url_for('static', filename='image2.png') }}") no-repeat center center fixed;
+      background-size: cover;
+      display: flex; flex-direction: column;
+      min-height: 100vh;
+    }
+    .card-carousel {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      padding: 4rem 2rem;
+      margin-top: 2rem;
+      scroll-snap-type: x mandatory;
+    }
+    .hover-card {
+      width: 300px;
+      height: 370px;
+      background: white;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      scroll-snap-align: center;
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+    }
+    .hover-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+    }
+    .hover-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      object-position: left;
+      flex-shrink: 0; /* Prevent shrinking */
+    }
+    .hover-card-content {
+      flex: 1 1 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1rem;
+      min-height: 0;
+    }
+    .hover-card h3,
+    .hover-card p {
+      margin-bottom: 0.5rem;
+      flex-shrink: 0;
+    }
+    .hover-card .btn {
+      margin-top: auto; /* Always push button to bottom */
+      background: #10b981;
+      color: white;
+      padding: 0.5rem 1.2rem;
+      border-radius: 0.5rem;
+      font-weight: bold;
+      transition: background 0.3s;
+      flex-shrink: 0;      /* Prevent shrinking */
+    }
+    .hover-card .btn:hover {
+      background: #059669;
+    }
+    .footer {
+      background: rgba(17, 82, 39, 0.85);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    .visually-hidden {
+      height: calc(100vh - 400px);
+    }
+    @media (max-width: 768px) {
+      .card-carousel {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    /* Only change flex direction on small screens */
+    @media (max-width: 900px) {
+      .card-carousel {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem 0;
+      }
+    }
+  </style>
+</head>
+<body class="font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-green-900 py-4 shadow-md w-full">
+  <div class="flex justify-between items-center px-4 w-full">
+    <h1 class="text-2xl font-bold text-white">🌱 AgroVista</h1>
+    <!-- Hamburger Icon (Mobile) -->
+    <button id="menu-btn" class="md:hidden text-white text-3xl focus:outline-none" aria-label="Open menu">
+      &#9776;
+    </button>
+    <!-- Menu List (Desktop) -->
+    <ul id="menu-list" class="hidden md:flex space-x-8 text-lg text-white md:static absolute right-0 top-16 bg-green-900 md:bg-transparent w-full md:w-auto flex-col md:flex-row md:items-center z-50">
+      <li class="px-4 py-2 md:p-0"><a href="{{ url_for('home') }}" class="hover:text-green-200">Home</a></li>
+      <li class="px-4 py-2 md:p-0"><a href="{{ url_for('market') }}" class="hover:text-green-200">Market</a></li>
+      <li class="px-4 py-2 md:p-0"><a href="{{ url_for('weather') }}" class="hover:text-green-200">Weather</a></li>
+      <li class="px-4 py-2 md:p-0"><a href="{{ url_for('predictor') }}" class="hover:text-green-200">Predictor</a></li>
+      <li class="px-4 py-2 md:p-0"><a href="{{ url_for('projects2') }}" class="hover:text-green-200">Projects</a></li>
+      <li class="px-4 py-2 md:p-0"><button id="contact-btn" class="hover:text-green-200">Contact</button></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Slide-in Menu Panel (Mobile, with icons) -->
+<div id="menuPanel" class="fixed top-6 right-2 h-auto min-h-[220px] w-48 bg-green-900 rounded-xl shadow-2xl z-50 hidden flex flex-col transition-transform duration-300">
+  <button id="closeMenuPanel" class="absolute top-2 right-3 text-green-100 hover:text-green-300 text-xl" aria-label="Close menu">&times;</button>
+  <nav class="mt-10 flex flex-col space-y-4 px-6 pb-6">
+    <a href="{{ url_for('home') }}" class="flex items-center text-white font-semibold hover:text-green-200">
+      <span class="mr-2">🏠</span> Home
+    </a>
+    <a href="{{ url_for('market') }}" class="flex items-center text-white font-semibold hover:text-green-200">
+      <span class="mr-2">🛒</span> Market
+    </a>
+    <a href="{{ url_for('weather') }}" class="flex items-center text-white font-semibold hover:text-green-200">
+      <span class="mr-2">☁️</span> Weather
+    </a>
+    <a href="{{ url_for('predictor') }}" class="flex items-center text-white font-semibold hover:text-green-200">
+      <span class="mr-2">📈</span> Predictor
+    </a>
+    <a href="{{ url_for('projects2') }}" class="flex items-center text-white font-semibold hover:text-green-200">
+      <span class="mr-2">📁</span> Projects
+    </a>
+    <button id="contact-btn-mobile" class="flex items-center text-white font-semibold hover:text-green-200 text-left">
+      <span class="mr-2">📞</span> Contact
+    </button>
+  </nav>
+</div>
+
+<!-- 📞 CONTACT MODAL (centered, theme-matching) -->
+<div id="contactModal" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 hidden">
+  <div class="bg-green-50 rounded-2xl shadow-lg p-6 max-w-md w-full relative border-t-8 border-green-900">
+    <button id="closeContactModal" class="absolute top-2 right-3 text-green-900 hover:text-green-700 text-xl">&times;</button>
+    <h2 class="text-2xl font-bold text-green-900 mb-4 mt-2">📞 Contact Us</h2>
+    <p><strong class="text-green-900">Email:</strong> <a href="mailto:abhinavpan2004@gmail.com" class="text-green-700 underline">abhinavpan2004@gmail.com</a></p>
+    <p><strong class="text-green-900">Phone:</strong> <a href="tel:+917697990750" class="text-green-700 underline">+91 7697990750</a></p>
+    <p class="mt-4"><strong class="text-green-900">LinkedIn:</strong> <a href="https://www.linkedin.com/in/adarsh-pandey-nitt" target="_blank" class="text-green-700 underline">Adarsh Pandey</a></p>
+    <p><strong class="text-green-900">GitHub:</strong> <a href="https://github.com/005-adarsh-pandey" target="_blank" class="text-green-700 underline">005-adarsh-pandey</a></p>
+  </div>
+</div>
+
+<script>
+  // Hamburger menu toggle for mobile
+  document.getElementById('menu-btn').onclick = function() {
+    document.getElementById('menuPanel').classList.toggle('hidden');
+  };
+  document.getElementById('closeMenuPanel').onclick = function() {
+    document.getElementById('menuPanel').classList.add('hidden');
+  };
+
+  // Contact modal toggle (desktop)
+  document.getElementById('contact-btn').onclick = function() {
+    document.getElementById('contactModal').classList.toggle('hidden');
+  };
+  // Contact modal toggle (mobile)
+  document.getElementById('contact-btn-mobile').onclick = function() {
+    document.getElementById('contactModal').classList.toggle('hidden');
+    document.getElementById('menuPanel').classList.add('hidden');
+  };
+  // Close contact modal
+  document.getElementById('closeContactModal').onclick = function() {
+    document.getElementById('contactModal').classList.add('hidden');
+  };
+</script>
+
+  <!-- Main Section -->
+  <main class="flex-grow">
+    <div class="card-carousel">
+      
+      <!-- Market Card -->
+      <div class="hover-card">
+        <img src="{{ url_for('static', filename='OIP.jpeg') }}" alt="Market Rates Graph" />
+        <div class="hover-card-content">
+          <h3 class="text-purple-700 text-xl">📈 Market Rates</h3>
+          <p>Track real-time pricing for crops and plan informed sales strategies.</p>
+          <a href="{{ url_for('market') }}" class="btn">Explore Rates</a>
+
+        </div>
+      </div>
+
+      <!-- Predictor Card -->
+      <div class="hover-card">
+        <img src="{{ url_for('static', filename='image.png') }}" alt="Sprouting Plant" />
+        <div class="hover-card-content">
+          <h3 class="text-yellow-600 text-xl">🌱 Crop Yield Predictor</h3>
+          <p>Estimate your crop yield and profit using advanced analytics and weather data.</p>
+          <a href="{{ url_for('predictor') }}" class="btn">Start Now</a>
+        </div>
+      </div>
+
+      <!-- Weather Card -->
+      <div class="hover-card">
+        <img src="https://wallup.net/wp-content/uploads/2019/09/416736-windmill-farm-mill-wind-power-landscape-rustic-3.jpg" alt="Weather" />
+        <div class="hover-card-content">
+          <h3 class="text-pink-600 text-xl">☁️ Weather Forecast</h3>
+          <p>Check your regional weather outlook to optimize planting decisions.</p>
+          <a href="{{ url_for('weather') }}" class="btn">Check Weather</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Spacer -->
+  <div class="visually-hidden"></div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Made with ❤️ by AgroVista Team</p>
+    <p>Contact: <a href="mailto:abhinavpan2004@gmail.com" class="underline">abhinavpan2004@gmail.com</a> | <a href="tel:+917697990750" class="underline">+91 7697990750</a></p>
+    <div class="flex justify-center space-x-6 mt-4">
+      <a href="#" target="_blank"><img src="https://logos-world.net/wp-content/uploads/2020/06/Linkedin-Logo-2003.png" class="h-8" alt="LinkedIn"></a>
+      <a href="#" target="_blank"><img src="https://pngimg.com/uploads/github/github_PNG65.png" class="h-8" alt="GitHub"></a>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+State,District,Market,Commodity,Variety,Grade,Arrival_Date,Min_Price,Max_Price,Modal_Price,Commodity_Code
+Uttar Pradesh,Khiri (Lakhimpur),Maigalganj,Wheat,Dara,FAQ,26/07/2025,2400,2500,2440,1
+Uttar Pradesh,Khiri (Lakhimpur),Maigalganj,Brinjal,Other,FAQ,26/07/2025,1740,1800,1769,35
+Uttar Pradesh,Khiri (Lakhimpur),Maigalganj,Pumpkin,Pumpkin,FAQ,26/07/2025,2400,2470,2460,84
+Uttar Pradesh,Mau(Maunathbhanjan),Kopaganj,Banana,Medium,Medium,26/07/2025,1000,1200,1100,19
+Uttar Pradesh,Hathras,Shadabad,Onion,Red,FAQ,26/07/2025,1200,1300,1250,23
+Uttar Pradesh,Mau(Maunathbhanjan),Kopaganj,Onion,Red,FAQ,26/07/2025,1300,1500,1400,23
+Uttar Pradesh,Mau(Maunathbhanjan),Kopaganj,Apple,Delicious,Medium,26/07/2025,8100,8300,8200,17
+Uttar Pradesh,Khiri (Lakhimpur),Maigalganj,Lemon,Lemon,FAQ,26/07/2025,4000,4070,4030,310
+Uttar Pradesh,Khiri (Lakhimpur),Maigalganj,Garlic,Garlic,FAQ,26/07/2025,2500,2590,2560,25
+Uttar Pradesh,Khiri (Lakhimpur),Maigalganj,Onion,Red,FAQ,26/07/2025,2400,2500,2460,23
+Uttar Pradesh,Mau(Maunathbhanjan),Kopaganj,Bhindi(Ladies Finger),Bhindi,FAQ,26/07/2025,900,1000,950,85
+Uttar Pradesh,Hathras,Shadabad,Potato,Desi,FAQ,26/07/2025,700,800,750,24
+Uttar Pradesh,Mau(Maunathbhanjan),Kopaganj,Cauliflower,Cauliflower,FAQ,26/07/2025,1200,1300,1250,34
+Uttar Pradesh,Khiri (Lakhimpur),Maigalganj,Apple,Kasmir/Shimla - II,Medium,26/07/2025,7800,7860,7830,17
+Uttar Pradesh,Khiri (Lakhimpur),Maigalganj,Green Chilli,Green Chilly,FAQ,26/07/2025,2900,3000,2950,87
+Uttar Pradesh,Khiri (Lakhimpur),Maigalganj,Bottle gourd,Bottle Gourd,FAQ,26/07/2025,1630,1670,1650,82
+Uttar Pradesh,Khiri (Lakhimpur),Maigalganj,Bhindi(Ladies Finger),Other,FAQ,26/07/2025,2100,2160,2130,85
+Uttar Pradesh,Mau(Maunathbhanjan),Kopaganj,Green Chilli,Green Chilly,FAQ,26/07/2025,1800,2000,1900,87
+Uttar Pradesh,Khiri (Lakhimpur),Maigalganj,Potato,Desi,Non-FAQ,26/07/2025,1640,1700,1670,24
+Uttar Pradesh,Khiri (Lakhimpur),Maigalganj,Mango,Dusheri,Medium,26/07/2025,1600,1700,1650,20
+Uttar Pradesh,Khiri (Lakhimpur),Maigalganj,Gur(Jaggery),Pathari,FAQ,26/07/2025,3400,3470,3450,74
+Uttar Pradesh,Mau(Maunathbhanjan),Kopaganj,Brinjal,Brinjal,FAQ,26/07/2025,900,1100,1000,35
+Uttar Pradesh,Khiri (Lakhimpur),Maigalganj,Tomato,Local,FAQ,26/07/2025,2400,2490,2440,78
+Uttar Pradesh,Khiri (Lakhimpur),Maigalganj,Cabbage,Cabbage,FAQ,26/07/2025,1400,1470,1450,154
+Uttar Pradesh,Mau(Maunathbhanjan),Kopaganj,Potato,Desi,FAQ,26/07/2025,800,1000,950,24
+Uttar Pradesh,Mau(Maunathbhanjan),Kopaganj,Bottle gourd,Bottle Gourd,FAQ,26/07/2025,1000,1100,1050,82
+Uttar Pradesh,Mau(Maunathbhanjan),Kopaganj,Cucumbar(Kheera),Cucumbar,FAQ,26/07/2025,1000,1300,1100,159

@@ -1,0 +1,196 @@
+missing_district_coords = {
+    # Union Territories
+    
+    # Andaman and Nicobar Islands
+    'NICOBAR': (7.0300, 93.7600),
+    'NORTH AND MIDDLE ANDAMAN': (12.7600, 92.7300),
+    'SOUTH ANDAMAN': (11.6234, 92.7265),
+    
+    # Chandigarh
+    'CHANDIGARH': (30.7333, 76.7794),
+    
+    # Dadra and Nagar Haveli and Daman and Diu
+    'DADRA AND NAGAR HAVELI': (20.1809, 73.0169),
+    'DAMAN': (20.4140, 72.8397),
+    'DIU': (20.7144, 70.9876),
+    
+    # Delhi
+    'CENTRAL DELHI': (28.6542, 77.2373),
+    'EAST DELHI': (28.6304, 77.2847),
+    'NEW DELHI': (28.6139, 77.2090),
+    'NORTH DELHI': (28.7041, 77.1025),
+    'NORTH EAST DELHI': (28.6692, 77.2765),
+    'NORTH WEST DELHI': (28.6872, 77.1173),
+    'SHAHDARA': (28.6748, 77.2811),
+    'SOUTH DELHI': (28.5355, 77.2486),
+    'SOUTH EAST DELHI': (28.5562, 77.2847),
+    'SOUTH WEST DELHI': (28.5706, 77.1669),
+    'WEST DELHI': (28.6419, 77.1025),
+    
+    # Ladakh
+    'KARGIL': (34.5539, 76.1315),
+    'LEH': (34.1642, 77.5845),
+    
+    # Lakshadweep
+    'LAKSHADWEEP': (10.5667, 72.6417),
+    
+    # Puducherry
+    'KARAIKAL': (10.9254, 79.8380),
+    'MAHE': (11.7000, 75.5342),
+    'PUDUCHERRY': (11.9416, 79.8083),
+    'YANAM': (16.7333, 82.2167),
+    
+    # Additional districts from states that might be missing or newly formed
+    
+    # Andhra Pradesh (if any new districts)
+    'ALLURI SITHARAMA RAJU': (18.0000, 82.0000),
+    'ANAKAPALLI': (17.6911, 83.0050),
+    'ANNAMAYYA': (13.9500, 79.4000),
+    'BAPATLA': (15.9040, 80.4691),
+    'ELURU': (16.7107, 81.0955),
+    'KAKINADA': (16.9891, 82.2473),
+    'KONASEEMA': (16.8000, 82.0000),
+    'KURNOOL': (15.8281, 78.0373),
+    'MANYAM': (18.2500, 83.4000),
+    'NTR': (16.5193, 81.5188),
+    'PALNADU': (16.0000, 79.5000),
+    'PARVATHIPURAM MANYAM': (18.7833, 83.4167),
+    'SRI POTTI SRIRAMULU NELLORE': (14.4426, 79.9865),
+    'TIRUPATI': (13.6288, 79.4192),
+    
+    # Assam (additional districts)
+    'BAJALI': (26.6333, 90.9667),
+    'BISWANATH': (26.7417, 93.1653),
+    'CHARAIDEO': (26.9842, 94.6377),
+    'HOJAI': (26.0000, 92.8667),
+    'KAMRUP METROPOLITAN': (26.1445, 91.7362),
+    'MAJULI': (26.9510, 94.2037),
+    'SOUTH SALMARA MANKACHAR': (25.2500, 90.0000),
+    'UDALGURI': (26.7500, 92.1000),
+    'WEST KARBI ANGLONG': (25.8833, 93.0833),
+    
+    # Bihar (additional districts)
+    'ARWAL': (25.2579, 84.6694),
+    'SHEIKHPURA': (25.1391, 85.8537),
+    'SHEOHAR': (26.5196, 85.2956),
+    
+    # Chhattisgarh (additional districts)
+    'BALOD': (20.7333, 81.2167),
+    'BALODA BAZAR': (21.6667, 82.1667),
+    'BALRAMPUR': (23.1167, 82.2333),
+    'BEMETARA': (21.7167, 81.5333),
+    'BIJAPUR': (19.2333, 81.0000),
+    'GARIABAND': (20.6333, 82.0667),
+    'GAURELLA PENDRA MARWAHI': (22.7500, 82.5833),
+    'KONDAGAON': (19.5833, 81.6667),
+    'MANENDRAGARH CHIRMIRI BHARATPUR': (23.2000, 82.9000),
+    'MOHLA MANPUR': (20.2500, 81.5000),
+    'MUNGELI': (22.0667, 81.6833),
+    'NARAYANPUR': (19.8833, 81.8667),
+    'SARANGARH BILAIGARH': (21.8333, 83.0167),
+    'SUKMA': (18.3833, 81.6667),
+    'SURAJPUR': (23.2167, 82.8667),
+    
+    # Haryana (additional districts)
+    'CHARKHI DADRI': (28.5833, 76.2667),
+    'NUH': (28.1124, 76.9756),
+    
+    # Himachal Pradesh (additional districts)
+    'BILASPUR': (31.3311, 76.7575),
+    
+    # Jammu and Kashmir (additional districts)
+    'RAMBAN': (33.2434, 75.2022),
+    'REASI': (33.0839, 74.8336),
+    'SAMBA': (32.5627, 75.1191),
+    
+    # Jharkhand (additional districts)
+    'KHUNTI': (23.0717, 85.2774),
+    'RAMGARH': (23.6021, 85.5197),
+    
+    # Karnataka (additional districts)
+    'CHIKKABALLAPURA': (13.4355, 77.7315),
+    'RAMANAGARA': (12.7179, 77.2823),
+    'YADGIR': (16.7700, 77.1400),
+    'VIJAYANAGARA': (15.3500, 76.4000),
+    
+    # Kerala (additional districts)
+    # All districts already included
+    
+    # Madhya Pradesh (additional districts)
+    'AGAR MALWA': (23.7127, 76.0154),
+    'ALIRAJPUR': (22.3000, 74.3667),
+    'NIWARI': (25.0000, 79.0000),
+    
+    # Maharashtra (additional districts)
+    'PALGHAR': (19.6966, 72.7638),
+    
+    # Manipur (additional districts)
+    'KAMJONG': (24.9167, 94.5000),
+    'KANGPOKPI': (24.7500, 93.8667),
+    'NONEY': (25.0000, 93.5000),
+    'PHERZAWL': (24.1667, 93.1667),
+    'TENGNOUPAL': (24.3000, 94.2000),
+    
+    # Meghalaya (additional districts)
+    'NORTH GARO HILLS': (25.8333, 90.6333),
+    'SOUTH WEST GARO HILLS': (25.3333, 90.0000),
+    'SOUTH WEST KHASI HILLS': (25.1667, 91.2833),
+    'WEST JAINTIA HILLS': (25.4500, 92.1500),
+    'EASTERN WEST KHASI HILLS': (25.4667, 91.1333),
+    
+    # Mizoram (additional districts)
+    'HNAHTHIAL': (23.0167, 92.8167),
+    'KHAWZAWL': (23.5833, 92.8833),
+    'SAITUAL': (23.5833, 92.9833),
+    
+    # Nagaland (additional districts)
+    'KIPHIRE': (25.9167, 94.8333),
+    'LONGLENG': (26.6167, 94.8333),
+    'NOKLAK': (26.8333, 95.0000),
+    'PEREN': (25.3333, 93.7333),
+    'SHAMATOR': (26.3333, 94.7333),
+    
+    # Odisha (additional districts)
+    'BOUDH': (20.8406, 84.3288),
+    
+    # Punjab (additional districts)
+    'MALERKOTLA': (30.5255, 75.8836),
+    
+    # Rajasthan (additional districts)
+    'PRATAPGARH': (24.0319, 74.7798),
+    
+    # Sikkim (additional districts)
+    # All districts already included
+    
+    # Tamil Nadu (additional districts)
+    'CHENGALPATTU': (12.6919, 79.9750),
+    'KALLAKURICHI': (11.7333, 78.9667),
+    'RANIPET': (12.9226, 79.3308),
+    'TENKASI': (8.9667, 77.3167),
+    'TIRUPATHUR': (12.4956, 78.5731),
+    
+    # Telangana (additional districts)
+    'MULUGU': (18.1833, 79.9167),
+    'NARAYANPET': (16.7500, 77.5000),
+    
+    # Tripura (additional districts)
+    # All districts already included
+    
+    # Uttar Pradesh (additional districts)
+    'SHAMLI': (29.4500, 77.3167),
+    'HAPUR': (28.7306, 77.7759),
+    'SAMBHAL': (28.5857, 78.5541),
+    'AMETHI': (26.1593, 81.8134),
+    'AURAIYA': (26.4656, 79.5130),
+    'KASGANJ': (27.8094, 78.6421),
+    
+    # Uttarakhand (additional districts)
+    # All districts already included
+    
+    # West Bengal (additional districts)
+    'ALIPURDUAR': (26.4833, 89.5333),
+    'JHARGRAM': (22.4500, 86.9833),
+    'KALIMPONG': (27.0667, 88.4667),
+    'PASCHIM BARDHAMAN': (23.2333, 87.0667),
+    'PURBA BARDHAMAN': (23.2500, 87.8667),
+}

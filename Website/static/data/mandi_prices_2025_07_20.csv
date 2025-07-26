@@ -1,0 +1,56 @@
+state,district,market,commodity,variety,grade,arrival_date,min_price,max_price,modal_price
+Punjab,Bhatinda,Rampuraphul(Nabha Mandi),Potato,Other,Non-FAQ,20/07/2025,400,500,450
+Punjab,Bhatinda,Rampuraphul(Nabha Mandi),Bhindi(Ladies Finger),Other,FAQ,20/07/2025,2500,3500,3000
+Punjab,Bhatinda,Rampuraphul(Nabha Mandi),Tomato,Other,Non-FAQ,20/07/2025,1000,2500,2000
+Punjab,Bhatinda,Rampuraphul(Nabha Mandi),Cucumbar(Kheera),Cucumbar,FAQ,20/07/2025,1000,1800,1500
+Punjab,Bhatinda,Rampuraphul(Nabha Mandi),Apple,Other,Small,20/07/2025,12000,14000,13000
+Punjab,Bhatinda,Rampuraphul(Nabha Mandi),Green Chilli,Green Chilly,FAQ,20/07/2025,1500,2500,2000
+Punjab,Bhatinda,Rampuraphul(Nabha Mandi),Onion,Other,Non-FAQ,20/07/2025,1000,1800,1500
+Kerala,Thiruvananthapuram,Parassala,Banana,Nendra Bale,Medium,20/07/2025,5000,5500,5000
+Kerala,Thiruvananthapuram,Parassala,Beetroot,Beetroot,FAQ,20/07/2025,4000,4500,4000
+Kerala,Thiruvananthapuram,Parassala,Cowpea(Veg),Cowpea (Veg),FAQ,20/07/2025,6800,7000,6800
+Kerala,Palakad,PERUMATTY VFPCK,Cowpea(Veg),Cowpea (Veg),FAQ,20/07/2025,3500,4000,3750
+Kerala,Thiruvananthapuram,Parassala,Cucumbar(Kheera),Cucumbar,FAQ,20/07/2025,3800,4000,3800
+Kerala,Palakad,PERUMATTY VFPCK,Bhindi(Ladies Finger),Bhindi,FAQ,20/07/2025,2500,3000,2750
+Kerala,Thiruvananthapuram,Parassala,Banana,Palayamthodan,Medium,20/07/2025,2000,2500,2000
+Kerala,Thiruvananthapuram,Parassala,Banana,Rasakathai,Medium,20/07/2025,4000,4500,4000
+Kerala,Thiruvananthapuram,Parassala,Green Chilli,Green Chilly,FAQ,20/07/2025,9000,10000,9000
+Kerala,Thiruvananthapuram,Parassala,Pumpkin,Pumpkin,FAQ,20/07/2025,2000,2500,2000
+Kerala,Kollam,Chengamanad  VFPCK,Banana,Banana - Ripe,Large,20/07/2025,8000,8000,8000
+Kerala,Kollam,PLAPPALLY VFPCK,Banana,Banana - Ripe,Large,20/07/2025,8000,8000,8000
+Kerala,Thiruvananthapuram,Parassala,Banana,Red Banana,Medium,20/07/2025,5500,6000,5500
+Kerala,Thiruvananthapuram,Parassala,Elephant Yam (Suran),Elephant Yam (Suran),FAQ,20/07/2025,4000,4500,4000
+Kerala,Thiruvananthapuram,Parassala,Pineapple,Pine Apple,Medium,20/07/2025,3800,4000,3800
+Kerala,Thiruvananthapuram,Parassala,Amaranthus,Amaranthus,FAQ,20/07/2025,6000,6500,6000
+Kerala,Thiruvananthapuram,Parassala,Brinjal,Round,FAQ,20/07/2025,4000,4500,4000
+Kerala,Thiruvananthapuram,Parassala,Brinjal,Round/Long,FAQ,20/07/2025,4000,4200,4000
+Kerala,Thiruvananthapuram,Parassala,Carrot,Carrot,FAQ,20/07/2025,4000,4500,4000
+Kerala,Thiruvananthapuram,Parassala,Colacasia,Other,FAQ,20/07/2025,6800,7000,6800
+Kerala,Thiruvananthapuram,Parassala,Drumstick,Drumstick,FAQ,20/07/2025,6800,7000,6800
+Kerala,Thiruvananthapuram,Parassala,Lemon,Lemon,FAQ,20/07/2025,6800,7000,6800
+Kerala,Thiruvananthapuram,Parassala,Snakeguard,Snakeguard,FAQ,20/07/2025,3800,4000,3800
+Kerala,Thiruvananthapuram,Parassala,Tomato,Tomato,FAQ,20/07/2025,3000,3200,3000
+Haryana,Gurgaon,Gurgaon,Mango,Other,Large,20/07/2025,3000,5000,4000
+Haryana,Gurgaon,Gurgaon,Bhindi(Ladies Finger),Other,FAQ,20/07/2025,2000,4000,3000
+Haryana,Gurgaon,Gurgaon,Banana,Other,Large,20/07/2025,2000,4000,3000
+Haryana,Gurgaon,Gurgaon,Bottle gourd,Bottle Gourd,FAQ,20/07/2025,1000,1400,1200
+Haryana,Gurgaon,Gurgaon,Brinjal,Brinjal,FAQ,20/07/2025,1000,1400,1200
+Haryana,Gurgaon,Gurgaon,Onion,Other,FAQ,20/07/2025,1000,2000,1500
+Haryana,Gurgaon,Gurgaon,Bitter gourd,Other,FAQ,20/07/2025,2000,3000,2500
+Haryana,Gurgaon,Gurgaon,Cabbage,Other,FAQ,20/07/2025,1000,1200,1100
+Haryana,Gurgaon,Gurgaon,Carrot,Other,FAQ,20/07/2025,1000,2000,1500
+Haryana,Gurgaon,Gurgaon,Cauliflower,Other,FAQ,20/07/2025,3000,5000,4000
+Haryana,Gurgaon,Gurgaon,Apple,Other,Large,20/07/2025,8000,10000,9000
+Haryana,Gurgaon,Gurgaon,Pomegranate,Other,Large,20/07/2025,8000,10000,9000
+Haryana,Gurgaon,Gurgaon,Potato,Other,FAQ,20/07/2025,1000,1400,1200
+Haryana,Gurgaon,Gurgaon,Tomato,Other,FAQ,20/07/2025,1000,2000,1500
+Gujarat,Narmada,Rajpipla,Banana,Other,Large,20/07/2025,1800,2700,2300
+Uttrakhand,Haridwar,Bhagwanpur(Naveen Mandi Sthal),Mango,Other,Medium,20/07/2025,600,900,800
+Uttrakhand,Haridwar,Bhagwanpur(Naveen Mandi Sthal),Pumpkin,Other,FAQ,20/07/2025,500,700,600
+Uttrakhand,Haridwar,Bhagwanpur(Naveen Mandi Sthal),Tomato,Other,Non-FAQ,20/07/2025,600,800,700
+Uttrakhand,Haridwar,Bhagwanpur(Naveen Mandi Sthal),Bitter gourd,Other,FAQ,20/07/2025,650,800,700
+Uttrakhand,Haridwar,Bhagwanpur(Naveen Mandi Sthal),Bottle gourd,Other,FAQ,20/07/2025,800,900,850
+Uttrakhand,Haridwar,Bhagwanpur(Naveen Mandi Sthal),Jack Fruit,Other,Medium,20/07/2025,650,800,700
+Uttrakhand,Haridwar,Bhagwanpur(Naveen Mandi Sthal),Onion,Other,Non-FAQ,20/07/2025,1200,1300,1250
+Uttrakhand,Haridwar,Bhagwanpur(Naveen Mandi Sthal),Potato,Other,Non-FAQ,20/07/2025,600,800,700
+Telangana,Nalgonda,Kodad,Paddy(Dhan)(Common),B P T,FAQ,20/07/2025,2300,2300,2300

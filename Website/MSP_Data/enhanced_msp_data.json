@@ -1,0 +1,237 @@
+{
+  "rice": {
+    "price": 2300,
+    "year": "2024-25",
+    "source": "MSP_Kharif_2020-25.pdf"
+  },
+  "jowar (hybrid)": {
+    "price": 3371,
+    "year": "2024-25",
+    "source": "MSP_Kharif_2013-25.csv"
+  },
+  "jowar (maldandi)": {
+    "price": 3421,
+    "year": "2024-25",
+    "source": "MSP_Kharif_2013-25.csv"
+  },
+  "pearl millet": {
+    "price": 2625,
+    "year": "2024-25",
+    "source": "MSP_Kharif_2020-25.pdf"
+  },
+  "finger millet": {
+    "price": 3846,
+    "year": "2023-24",
+    "source": "MSP_2023-24.csv"
+  },
+  "maize": {
+    "price": 2090,
+    "year": "2023-24",
+    "source": "MSP_2023-24.csv"
+  },
+  "tur": {
+    "price": 7000,
+    "year": "2023-24",
+    "source": "MSP_2023-24.csv"
+  },
+  "moong": {
+    "price": 8558,
+    "year": "2023-24",
+    "source": "MSP_2023-24.csv"
+  },
+  "urad": {
+    "price": 6950,
+    "year": "2023-24",
+    "source": "MSP_2023-24.csv"
+  },
+  "cotton (medium staple )": {
+    "price": 7121,
+    "year": "2024-25",
+    "source": "MSP_Kharif_2013-25.csv"
+  },
+  "cotton (long staple )": {
+    "price": 7521,
+    "year": "2024-25",
+    "source": "MSP_Kharif_2013-25.csv"
+  },
+  "groundnut": {
+    "price": 6377,
+    "year": "2023-24",
+    "source": "MSP_2023-24.csv"
+  },
+  "sunflower seed": {
+    "price": 6760,
+    "year": "2023-24",
+    "source": "MSP_2023-24.csv"
+  },
+  "soyabean yellow": {
+    "price": 4892,
+    "year": "2024-25",
+    "source": "MSP_Kharif_2013-25.csv"
+  },
+  "sesame": {
+    "price": 8635,
+    "year": "2023-24",
+    "source": "MSP_2023-24.csv"
+  },
+  "niger seed": {
+    "price": 7734,
+    "year": "2023-24",
+    "source": "MSP_2023-24.csv"
+  },
+  "sorghum": {
+    "price": 3371,
+    "year": "2024-25",
+    "source": "MSP_Kharif_2020-25.pdf"
+  },
+  "soyabeen (yellow)": {
+    "price": 4600,
+    "year": "2023-24",
+    "source": "MSP_2023-24.csv"
+  },
+  "cotton": {
+    "price": 7121,
+    "year": "2024-25",
+    "source": "MSP_Kharif_2020-25.pdf"
+  },
+  "wheat": {
+    "price": 2425,
+    "year": "2024-25",
+    "source": "MSP 2016-25.pdf"
+  },
+  "barley": {
+    "price": 1850,
+    "year": "2023-24",
+    "source": "MSP_2023-24.csv"
+  },
+  "chickpea": {
+    "price": 5440,
+    "year": "2023-24",
+    "source": "MSP_2023-24.csv"
+  },
+  "masur (lentil)": {
+    "price": 6425,
+    "year": "2023-24",
+    "source": "MSP_2023-24.csv"
+  },
+  "rapeseed & mustard": {
+    "price": 5650,
+    "year": "2023-24",
+    "source": "MSP_2023-24.csv"
+  },
+  "safflower": {
+    "price": 5800,
+    "year": "2023-24",
+    "source": "MSP_2023-24.csv"
+  },
+  "copra (calender year)": {
+    "price": 11750,
+    "year": "2023-24",
+    "source": "MSP_2023-24.csv"
+  },
+  "jute": {
+    "price": 5050,
+    "year": "2023-24",
+    "source": "MSP_2023-24.csv"
+  },
+  "sugarcane": {
+    "price": 355,
+    "year": "2024-25",
+    "source": "MSP 2016-25.pdf"
+  },
+  "onion": {
+    "price": 2000,
+    "year": "2024-25",
+    "source": "Estimated"
+  },
+  "potato": {
+    "price": 2000,
+    "year": "2024-25",
+    "source": "Estimated"
+  },
+  "tomato": {
+    "price": 2500,
+    "year": "2024-25",
+    "source": "Estimated"
+  },
+  "mango": {
+    "price": 3000,
+    "year": "2024-25",
+    "source": "Estimated"
+  },
+  "banana": {
+    "price": 2000,
+    "year": "2024-25",
+    "source": "Estimated"
+  },
+  "coconut": {
+    "price": 12000,
+    "year": "2024-25",
+    "source": "Estimated"
+  },
+  "tea": {
+    "price": 2500,
+    "year": "2024-25",
+    "source": "Estimated"
+  },
+  "coffee": {
+    "price": 8000,
+    "year": "2024-25",
+    "source": "Estimated"
+  },
+  "rubber": {
+    "price": 20000,
+    "year": "2024-25",
+    "source": "Estimated"
+  },
+  "cardamom": {
+    "price": 150000,
+    "year": "2024-25",
+    "source": "Estimated"
+  },
+  "black pepper": {
+    "price": 70000,
+    "year": "2024-25",
+    "source": "Estimated"
+  },
+  "turmeric": {
+    "price": 15000,
+    "year": "2024-25",
+    "source": "Estimated"
+  },
+  "ginger": {
+    "price": 8000,
+    "year": "2024-25",
+    "source": "Estimated"
+  },
+  "garlic": {
+    "price": 5000,
+    "year": "2024-25",
+    "source": "Estimated"
+  },
+  "chili": {
+    "price": 12000,
+    "year": "2024-25",
+    "source": "Estimated"
+  },
+  "coriander": {
+    "price": 8000,
+    "year": "2024-25",
+    "source": "Estimated"
+  },
+  "cumin": {
+    "price": 15000,
+    "year": "2024-25",
+    "source": "Estimated"
+  },
+  "fennel": {
+    "price": 8000,
+    "year": "2024-25",
+    "source": "Estimated"
+  },
+  "fenugreek": {
+    "price": 6000,
+    "year": "2024-25",
+    "source": "Estimated"
+  }
+}

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather Forecast | AgroVista</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+</head>
+<body class="bg-green-50 font-sans min-h-screen flex flex-col">
+
+  <!-- Navbar -->
+  <nav class="bg-green-900 py-4 shadow-md w-full">
+    <div class="flex justify-between items-center px-4 w-full">
+      <h1 class="text-2xl font-bold text-white">🌱 AgroVista</h1>
+      <!-- Hamburger Icon (Mobile) -->
+      <button id="menu-btn" class="md:hidden text-white text-3xl focus:outline-none" onclick="toggleMenuPanel()">
+        &#9776;
+      </button>
+      <!-- Menu List (Desktop) -->
+      <ul id="menu-list" class="hidden md:flex space-x-8 text-lg text-white md:static absolute right-0 top-16 bg-green-900 md:bg-transparent w-full md:w-auto flex-col md:flex-row md:items-center z-50">
+        <li class="px-4 py-2 md:p-0"><a href="{{ url_for('home') }}" class="hover:text-green-200">Home</a></li>
+        <li class="px-4 py-2 md:p-0"><a href="{{ url_for('market') }}" class="hover:text-green-200">Market</a></li>
+        <li class="px-4 py-2 md:p-0"><a href="{{ url_for('predictor') }}" class="hover:text-green-200">Predictor</a></li>
+        <li class="px-4 py-2 md:p-0"><a href="{{ url_for('projects2') }}" class="hover:text-green-200">Projects</a></li>
+        <li class="px-4 py-2 md:p-0"><button onclick="toggleModal();toggleMenuPanel(true)" class="hover:text-green-200">Contact</button></li>
+      </ul>
+    </div>
+  </nav>
+
+  
+  <!-- Slide-in Menu Panel (Mobile) -->
+  <div id="menuPanel" class="fixed top-6 right-2 h-auto min-h-[220px] w-48 bg-green-900 rounded-xl shadow-2xl z-50 hidden flex flex-col transition-transform duration-300">
+    <button onclick="toggleMenuPanel()" class="absolute top-2 right-3 text-green-100 hover:text-green-300 text-xl">&times;</button>
+    <nav class="mt-10 flex flex-col space-y-4 px-6 pb-6">
+      <a href="{{ url_for('home') }}" class="flex items-center text-white font-semibold hover:text-green-200">
+        <span class="mr-2">🏠</span> Home
+      </a>
+      <a href="{{ url_for('market') }}" class="flex items-center text-white font-semibold hover:text-green-200">
+        <span class="mr-2">🛒</span> Market
+      </a>
+      <a href="{{ url_for('predictor') }}" class="flex items-center text-white font-semibold hover:text-green-200">
+        <span class="mr-2">📈</span> Predictor
+      </a>
+      <a href="{{ url_for('projects2') }}" class="flex items-center text-white font-semibold hover:text-green-200">
+        <span class="mr-2">📁</span> Projects
+      </a>
+      <button onclick="toggleModal();toggleMenuPanel(true)" class="flex items-center text-white font-semibold hover:text-green-200 text-left">
+        <span class="mr-2">📞</span> Contact
+      </button>
+    </nav>
+  </div>
+
+
+
+  <!-- Contact Modal (Right Panel) -->
+  <div id="contactModal" class="fixed top-0 right-0 h-full w-80 sm:w-96 bg-white shadow-lg z-50 hidden flex flex-col transition-all duration-300">
+    <div class="relative p-6 flex-1 flex flex-col">
+      <button onclick="toggleModal()" class="absolute top-2 right-3 text-gray-500 hover:text-gray-800 text-xl">&times;</button>
+      <h2 class="text-2xl font-bold text-green-700 mb-4 mt-2">📞 Contact Us</h2>
+      <p><strong>Email:</strong> <a href="mailto:abhinavpan2004@gmail.com" class="text-green-700 underline">abhinavpan2004@gmail.com</a></p>
+      <p><strong>Phone:</strong> <a href="tel:+917697990750" class="text-green-700 underline">+91 7697990750</a></p>
+      <p class="mt-4"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/adarsh-pandey-nitt" target="_blank" class="text-green-700 underline">Adarsh Pandey</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/005-adarsh-pandey" target="_blank" class="text-green-700 underline">005-adarsh-pandey</a></p>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="flex-grow flex flex-col items-center justify-center px-2 sm:px-4 py-8 w-full">
+    <h2 class="text-3xl font-bold text-green-800 mb-6 text-center">☁️ Weather Forecast</h2>
+
+    <form id="forecast-form" class="flex flex-col items-center gap-4 w-full max-w-xl" onsubmit="submitForecast(event)">
+      <!-- State and City Dropdowns -->
+      <div class="flex flex-wrap gap-4 justify-center w-full">
+        <select id="state-select" required
+                class="px-4 py-2 border border-gray-300 rounded-lg w-full sm:w-64 focus:outline-none focus:ring-2 focus:ring-green-500">
+          <option value="">-- Select State --</option>
+        </select>
+
+        <select id="city-select" required disabled
+                class="px-4 py-2 border border-gray-300 rounded-lg w-full sm:w-64 focus:outline-none focus:ring-2 focus:ring-green-500">
+          <option value="">-- Select City --</option>
+        </select>
+      </div>
+
+      <!-- Hidden Inputs -->
+      <input type="hidden" name="city" id="city-name">
+      <input type="hidden" name="latitude" id="latitude">
+      <input type="hidden" name="longitude" id="longitude">
+
+      <!-- Submit Button -->
+      <button type="submit"
+              class="px-6 py-2 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 transition w-full sm:w-auto">
+        Get Forecast
+      </button>
+    </form>
+
+    <!-- 6-Month Weather Forecast Section -->
+    <div id="six-month-forecast" class="mt-8 w-full px-4 lg:px-8 hidden">
+      <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+        <h3 class="text-xl font-bold text-blue-800 mb-4">🌤️ 6-Month Weather Forecast</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="forecast-cards">
+          <!-- Forecast cards will be dynamically populated -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Forecast Result -->
+    <div id="forecast-result" class="mt-8 text-center w-full"></div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-green-900 text-white text-center p-6 mt-20 w-full">
+    <p>Made with ❤️ by AgroVista Team</p>
+    <p>Contact: 
+      <a href="mailto:abhinavpan2004@gmail.com" class="underline">abhinavpan2004@gmail.com</a> | 
+      <a href="tel:+917697990750" class="underline">+91 7697990750</a>
+    </p>
+    <div class="flex justify-center space-x-6 mt-4">
+      <a href="https://www.linkedin.com/in/adarsh-pandey-nitt" target="_blank">
+        <img src="https://logos-world.net/wp-content/uploads/2020/06/Linkedin-Logo-2003.png" class="h-8" alt="LinkedIn">
+      </a>
+      <a href="https://github.com/005-adarsh-pandey" target="_blank">
+        <img src="https://pngimg.com/uploads/github/github_PNG65.png" class="h-8" alt="GitHub">
+      </a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Hamburger menu toggle for mobile
+    function toggleMenu(forceClose = false) {
+      const menu = document.getElementById('menu-list');
+      if (forceClose) {
+        menu.classList.add('hidden');
+        return;
+      }
+      menu.classList.toggle('hidden');
+    }
+
+    // Slide-in menu panel toggle
+    function toggleMenuPanel(forceClose = false) {
+      const panel = document.getElementById('menuPanel');
+      if (forceClose) {
+        panel.classList.add('hidden');
+        return;
+      }
+      panel.classList.toggle('hidden');
+    }
+
+    // Contact modal toggle
+    function toggleModal() {
+      const modal = document.getElementById('contactModal');
+      modal.classList.toggle('hidden');
+    }
+
+    // ...existing JS code for weather form...
+    const stateMap = {
+      "01": "Jammu and Kashmir", "02": "Himachal Pradesh", "03": "Punjab", "04": "Chandigarh",
+      "05": "Uttarakhand", "06": "Haryana", "07": "Delhi", "08": "Rajasthan", "09": "Uttar Pradesh",
+      "10": "Bihar", "11": "Sikkim", "12": "Arunachal Pradesh", "13": "Nagaland", "14": "Meghalaya",
+      "15": "Mizoram", "16": "Tripura", "17": "Manipur", "18": "Assam", "19": "West Bengal",
+      "20": "Jharkhand", "21": "Odisha", "22": "Chhattisgarh", "23": "Madhya Pradesh",
+      "24": "Gujarat", "25": "Dadra and Nagar Haveli and Daman and Diu", "26": "Maharashtra",
+      "27": "Andhra Pradesh", "28": "Karnataka", "29": "Goa", "30": "Lakshadweep", "31": "Kerala",
+      "32": "Tamil Nadu", "33": "Puducherry","34": "Andaman and Nicobar Islands", "35": "Ladakh", "36": "Telangana"
+    };
+
+    let allPlaces = [];
+
+    async function loadData() {
+      const res = await fetch('/api/places');
+      allPlaces = await res.json();
+
+      const stateSelect = document.getElementById('state-select');
+      const citySelect = document.getElementById('city-select');
+
+      const states = [...new Set(allPlaces.map(p => p.state_code))].sort((a, b) =>
+        (stateMap[a] || '').localeCompare(stateMap[b] || '')
+      );
+
+      states.forEach(code => {
+        const opt = new Option(stateMap[code] || `State ${code}`, code);
+        stateSelect.appendChild(opt);
+      });
+
+      stateSelect.addEventListener('change', () => {
+        const selectedState = stateSelect.value;
+        const cities = allPlaces
+          .filter(p => p.state_code === selectedState)
+          .sort((a, b) => a.city.localeCompare(b.city));
+
+        citySelect.innerHTML = '<option value="">-- Select City --</option>';
+        cities.forEach(city => {
+          const opt = new Option(city.city, city.city);
+          opt.dataset.lat = city.lat;
+          opt.dataset.lon = city.lon;
+          opt.dataset.state = city.state_code;
+          citySelect.appendChild(opt);
+        });
+
+        citySelect.disabled = cities.length === 0;
+
+        citySelect.addEventListener('change', () => {
+          const selected = citySelect.options[citySelect.selectedIndex];
+          document.getElementById('latitude').value = selected.dataset.lat || '';
+          document.getElementById('longitude').value = selected.dataset.lon || '';
+          document.getElementById('city-name').value = selected.value || '';
+        });
+      });
+    }
+
+    async function submitForecast(e) {
+      e.preventDefault();
+
+      const city = document.getElementById("city-name").value;
+      const lat = document.getElementById("latitude").value;
+      const lon = document.getElementById("longitude").value;
+      const state_code = document.getElementById("state-select").value;
+      const result = document.getElementById("forecast-result");
+
+      if (!city || !lat || !lon || !state_code) {
+        result.innerHTML = `<p class="text-red-600">Please select a valid city and state.</p>`;
+        return;
+      }
+
+      result.innerHTML = `<p class="text-gray-600">Loading forecast...</p>`;
+
+      try {
+        const res = await fetch("/weather/forecast", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ state_code, city, lat, lon })
+        });
+
+        const data = await res.json();
+        if (res.ok && data.image) {
+          // Show and populate 6-month forecast first using real data
+          display6MonthForecast(city, state_code);
+          
+          // Then show the weather graph below
+          result.innerHTML = `
+            <h3 class="text-xl font-semibold mb-4">Weather Chart for ${city}</h3>
+            <div class="px-4 lg:px-12">
+              <img src="${data.image}" alt="Forecast" class="mx-auto border rounded-lg shadow-lg max-w-full w-[800px]" />
+            </div>
+          `;
+        } else {
+          result.innerHTML = `<p class="text-red-600">${data.error || 'Failed to generate forecast.'}</p>`;
+        }
+      } catch (err) {
+        result.innerHTML = `<p class="text-red-600">Error: ${err.message}</p>`;
+      }
+    }
+
+    // Function to display 6-month weather forecast using real data
+    async function display6MonthForecast(city, state_code) {
+      const forecastContainer = document.getElementById('six-month-forecast');
+      const cardsContainer = document.getElementById('forecast-cards');
+      
+      // Show the forecast section
+      forecastContainer.classList.remove('hidden');
+      
+      // Update the title with location
+      const title = forecastContainer.querySelector('h3');
+      title.textContent = `🌤️ 6-Month Weather Forecast for ${city}`;
+      
+      // Show loading message
+      cardsContainer.innerHTML = '<div class="col-span-full text-center text-gray-600">Loading real weather data...</div>';
+      
+      try {
+        // Get real weather data from the same .nc file used for the graph
+        const lat = document.getElementById('latitude').value;
+        const lon = document.getElementById('longitude').value;
+        
+        const response = await fetch('/weather/cards-data', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ city, state_code, lat: parseFloat(lat), lon: parseFloat(lon) })
+        });
+        
+        const data = await response.json();
+        
+        if (response.ok && data.success) {
+          // Generate forecast cards using real data
+          let forecastHTML = '';
+          data.weather_cards.forEach((weather, index) => {
+            forecastHTML += `
+              <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                <h5 class="font-semibold text-blue-700 text-lg mb-2">${weather.month}</h5>
+                <p class="text-sm mb-1">🌡️ ${weather.temperature}°C</p>
+                <p class="text-sm mb-1">🌧️ ${weather.rainfall} mm</p>
+                <p class="text-sm mb-1">💧 ${Math.round(weather.rainfall * 0.1 + 40)}%</p>
+                <p class="text-sm text-gray-600">${weather.condition}</p>
+              </div>
+            `;
+          });
+          
+          // Add data source info
+          forecastHTML += `
+            <div class="col-span-full text-center mt-4">
+              <p class="text-sm text-gray-500 mt-3">
+                📡 Real weather data from CDS API | 📅 Reference: ${data.reference_time}
+              </p>
+            </div>
+          `;
+          
+          cardsContainer.innerHTML = forecastHTML;
+          
+        } else {
+          // Fallback to basic message if API fails
+          cardsContainer.innerHTML = `
+            <div class="col-span-full text-center text-red-600">
+              Failed to load real weather data. Please try again.
+            </div>
+          `;
+        }
+        
+      } catch (error) {
+        console.error('Error fetching weather cards data:', error);
+        cardsContainer.innerHTML = `
+          <div class="col-span-full text-center text-red-600">
+            Error loading weather data: ${error.message}
+          </div>
+        `;
+      }
+    }
+
+    window.onload = loadData;
+  </script>
+</body>
+</html>

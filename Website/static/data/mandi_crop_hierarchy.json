@@ -1,0 +1,1706 @@
+{
+  "Punjab": {
+    "Amritsar": {
+      "Rayya": [
+        "Bhindi(Ladies Finger)",
+        "Brinjal",
+        "Cauliflower",
+        "Green Chilli",
+        "Onion",
+        "Potato",
+        "Raddish",
+        "Tomato"
+      ]
+    },
+    "Hoshiarpur": {
+      "Tanda Urmur": [
+        "Apple",
+        "Bhindi(Ladies Finger)",
+        "Bitter gourd",
+        "Brinjal",
+        "Cabbage",
+        "Capsicum",
+        "Cauliflower",
+        "Cucumbar(Kheera)",
+        "Field Pea",
+        "Garlic",
+        "Ginger(Dry)",
+        "Green Chilli",
+        "Lemon",
+        "Onion",
+        "Papaya",
+        "Pineapple",
+        "Potato",
+        "Pumpkin",
+        "Raddish",
+        "Tinda",
+        "Tomato"
+      ]
+    },
+    "Tarntaran": {
+      "Patti": [
+        "Bhindi(Ladies Finger)",
+        "Bitter gourd",
+        "Brinjal",
+        "Capsicum",
+        "Cucumbar(Kheera)",
+        "Green Chilli",
+        "Onion",
+        "Potato",
+        "Round gourd",
+        "Tomato"
+      ]
+    },
+    "Ludhiana": {
+      "Sahnewal": [
+        "Bitter gourd",
+        "Onion",
+        "Potato",
+        "Round gourd",
+        "Tomato"
+      ]
+    }
+  },
+  "Telangana": {
+    "Hyderabad": {
+      "L B Nagar": [
+        "Banana - Green",
+        "Beetroot",
+        "Bhindi(Ladies Finger)",
+        "Bitter gourd",
+        "Bottle gourd",
+        "Brinjal",
+        "Cabbage",
+        "Capsicum",
+        "Carrot",
+        "Cauliflower",
+        "Cluster beans",
+        "Cucumbar(Kheera)",
+        "Drumstick",
+        "Field Pea",
+        "French Beans (Frasbean)",
+        "Green Chilli",
+        "Onion",
+        "Pumpkin",
+        "Snakeguard",
+        "Tomato"
+      ]
+    },
+    "Karimnagar": {
+      "Huzzurabad": [
+        "Paddy(Dhan)(Common)"
+      ],
+      "Manakodur": [
+        "Paddy(Dhan)(Common)"
+      ],
+      "Vemulawada": [
+        "Paddy(Dhan)(Common)"
+      ]
+    },
+    "Nalgonda": {
+      "Devarkonda(Mallepalli)": [
+        "Paddy(Dhan)(Common)"
+      ],
+      "Devarakonda": [
+        "Paddy(Dhan)(Common)"
+      ],
+      "Devarkonda(Dindi)": [
+        "Paddy(Dhan)(Common)"
+      ],
+      "Kodad": [
+        "Paddy(Dhan)(Common)"
+      ]
+    },
+    "Warangal": {
+      "Warangal": [
+        "Bengal Gram(Gram)(Whole)",
+        "Groundnut",
+        "Maize"
+      ]
+    },
+    "Khammam": {
+      "Kallur": [
+        "Paddy(Dhan)(Common)"
+      ],
+      "Wyra": [
+        "Paddy(Dhan)(Common)"
+      ]
+    }
+  },
+  "Kerala": {
+    "Alappuzha": {
+      "Chengannur": [
+        "Amphophalus",
+        "Ashgourd",
+        "Banana - Green",
+        "Beetroot",
+        "Bhindi(Ladies Finger)",
+        "Bitter gourd",
+        "Bottle gourd",
+        "Brinjal",
+        "Cabbage",
+        "Capsicum",
+        "Carrot",
+        "Cauliflower",
+        "Cluster beans",
+        "Coconut",
+        "Colacasia",
+        "Cowpea(Veg)",
+        "Cucumbar(Kheera)",
+        "Drumstick",
+        "Garlic",
+        "Ginger(Green)",
+        "Green Chilli",
+        "Lemon",
+        "Mango (Raw-Ripe)",
+        "Onion",
+        "Potato",
+        "Pumpkin",
+        "Snakeguard",
+        "Tomato"
+      ],
+      "Harippad": [
+        "Amaranthus",
+        "Amphophalus",
+        "Ashgourd",
+        "Banana",
+        "Banana - Green",
+        "Beetroot",
+        "Bhindi(Ladies Finger)",
+        "Bitter gourd",
+        "Bottle gourd",
+        "Brinjal",
+        "Cabbage",
+        "Capsicum",
+        "Carrot",
+        "Cauliflower",
+        "Colacasia",
+        "Cowpea(Veg)",
+        "Cucumbar(Kheera)",
+        "Ginger(Green)",
+        "Green Chilli",
+        "Mango",
+        "Onion",
+        "Pineapple"
+      ],
+      "Mannar": [
+        "Amphophalus",
+        "Ashgourd",
+        "Banana - Green",
+        "Beetroot"
+      ],
+      "CHENNITHALA VFPCK": [
+        "Tapioca"
+      ],
+      "EDATHWA VFPCK": [
+        "Tapioca"
+      ]
+    },
+    "Ernakulam": {
+      "Thrippunithura": [
+        "Amphophalus",
+        "Ashgourd",
+        "Banana",
+        "Banana - Green",
+        "Beetroot",
+        "Bhindi(Ladies Finger)",
+        "Bitter gourd",
+        "Bottle gourd",
+        "Brinjal",
+        "Cabbage",
+        "Capsicum",
+        "Carrot",
+        "Cauliflower",
+        "Cluster beans",
+        "Colacasia",
+        "Cowpea(Veg)",
+        "Cucumbar(Kheera)",
+        "Drumstick",
+        "Ginger(Green)",
+        "Green Chilli",
+        "Indian Beans (Seam)",
+        "Leafy Vegetable",
+        "Lemon",
+        "Little gourd (Kundru)",
+        "Mango (Raw-Ripe)",
+        "Onion",
+        "Pineapple",
+        "Potato",
+        "Pumpkin",
+        "Snakeguard",
+        "Tapioca",
+        "Tomato"
+      ],
+      "Mazhuvannur VFPCK": [
+        "Ashgourd",
+        "Banana",
+        "Elephant Yam (Suran)",
+        "Papaya",
+        "Pineapple",
+        "Tapioca"
+      ],
+      "Aluva": [
+        "Amaranthus",
+        "Ashgourd",
+        "Banana",
+        "Banana - Green",
+        "Bhindi(Ladies Finger)",
+        "Bitter gourd",
+        "Brinjal",
+        "Cabbage",
+        "Carrot",
+        "Cauliflower",
+        "Coconut Seed",
+        "Colacasia",
+        "Cowpea(Veg)",
+        "Cucumbar(Kheera)",
+        "Drumstick",
+        "Elephant Yam (Suran)",
+        "Ginger(Green)",
+        "Green Chilli",
+        "Little gourd (Kundru)",
+        "Mango (Raw-Ripe)",
+        "Onion",
+        "Pineapple",
+        "Potato",
+        "Pumpkin",
+        "Snakeguard",
+        "Tapioca",
+        "Tomato"
+      ],
+      "Kadungallur  VFPCK": [
+        "Banana"
+      ],
+      "KARUMALOOR VFPCK": [
+        "Banana"
+      ],
+      "North Paravur": [
+        "Alsandikai",
+        "Amaranthus",
+        "Amla(Nelli Kai)",
+        "Amphophalus",
+        "Ashgourd",
+        "Banana - Green",
+        "Beetroot",
+        "Bhindi(Ladies Finger)",
+        "Bitter gourd",
+        "Black pepper",
+        "Bottle gourd",
+        "Brinjal",
+        "Cabbage",
+        "Capsicum",
+        "Carrot",
+        "Cauliflower",
+        "Coconut",
+        "Colacasia",
+        "Coriander(Leaves)",
+        "Cowpea(Veg)",
+        "Cucumbar(Kheera)",
+        "Drumstick",
+        "French Beans (Frasbean)",
+        "Garlic",
+        "Ginger(Green)",
+        "Green Chilli",
+        "Indian Beans (Seam)",
+        "Lemon",
+        "Little gourd (Kundru)",
+        "Mango (Raw-Ripe)",
+        "Mint(Pudina)",
+        "Onion",
+        "Pineapple",
+        "Potato",
+        "Pumpkin",
+        "Ridgeguard(Tori)",
+        "Snakeguard",
+        "Sweet Potato",
+        "Tapioca",
+        "Tomato"
+      ],
+      "Perumbavoor": [
+        "Amaranthus",
+        "Arecanut(Betelnut/Supari)",
+        "Ashgourd",
+        "Banana",
+        "Banana - Green",
+        "Beetroot",
+        "Bhindi(Ladies Finger)",
+        "Bitter gourd",
+        "Black pepper",
+        "Bottle gourd",
+        "Brinjal",
+        "Cabbage",
+        "Carrot",
+        "Cauliflower",
+        "Coconut Seed",
+        "Colacasia",
+        "Cowpea(Veg)",
+        "Cucumbar(Kheera)",
+        "Drumstick",
+        "Elephant Yam (Suran)",
+        "Field Pea",
+        "Ginger(Dry)",
+        "Ginger(Green)",
+        "Green Chilli",
+        "Indian Beans (Seam)",
+        "Lemon",
+        "Little gourd (Kundru)",
+        "Mango (Raw-Ripe)",
+        "Onion",
+        "Pineapple",
+        "Potato",
+        "Pumpkin",
+        "Tapioca",
+        "Tomato"
+      ]
+    },
+    "Wayanad": {
+      "Pulpally": [
+        "Amaranthus",
+        "Banana",
+        "Bitter gourd",
+        "Coffee",
+        "Cowpea(Veg)",
+        "Cucumbar(Kheera)",
+        "Ginger(Dry)",
+        "Green Chilli",
+        "Paddy(Dhan)(Common)",
+        "Pepper ungarbled",
+        "Pumpkin",
+        "Rubber"
+      ],
+      "Manathavady": [
+        "Ashgourd",
+        "Banana",
+        "Bitter gourd",
+        "Black pepper",
+        "Coffee",
+        "Cowpea(Veg)",
+        "Cucumbar(Kheera)",
+        "Ginger(Green)",
+        "Green Chilli",
+        "Pumpkin",
+        "Rubber",
+        "Snakeguard"
+      ]
+    },
+    "Thirssur": {
+      "Thrissur": [
+        "Amaranthus",
+        "Ashgourd",
+        "Banana",
+        "Beetroot",
+        "Bhindi(Ladies Finger)",
+        "Bitter gourd",
+        "Brinjal",
+        "Cabbage",
+        "Carrot",
+        "Cauliflower",
+        "Cluster beans",
+        "Coconut Seed",
+        "Cowpea(Veg)",
+        "Cucumbar(Kheera)",
+        "Drumstick",
+        "Elephant Yam (Suran)",
+        "Ginger(Green)",
+        "Green Chilli",
+        "Lemon",
+        "Little gourd (Kundru)",
+        "Mango (Raw-Ripe)",
+        "Onion",
+        "Pineapple",
+        "Potato",
+        "Pumpkin",
+        "Snakeguard",
+        "Tapioca",
+        "Tomato"
+      ],
+      "KADUKUTTY VFPCK": [
+        "Banana"
+      ]
+    },
+    "Kottayam": {
+      "Pampady": [
+        "Amaranthus",
+        "Ashgourd",
+        "Banana",
+        "Banana - Green",
+        "Bhindi(Ladies Finger)",
+        "Bitter gourd",
+        "Brinjal",
+        "Cabbage",
+        "Cauliflower",
+        "Coconut",
+        "Colacasia",
+        "Cowpea(Veg)",
+        "Cucumbar(Kheera)",
+        "Drumstick",
+        "Elephant Yam (Suran)",
+        "Ginger(Green)",
+        "Green Chilli",
+        "Indian Beans (Seam)",
+        "Little gourd (Kundru)",
+        "Mango (Raw-Ripe)",
+        "Onion",
+        "Potato",
+        "Pumpkin",
+        "Snakeguard",
+        "Tapioca",
+        "Tomato"
+      ],
+      "Ettumanoor": [
+        "Ashgourd",
+        "Banana",
+        "Banana - Green",
+        "Beetroot",
+        "Bhindi(Ladies Finger)",
+        "Bitter gourd",
+        "Brinjal",
+        "Cabbage",
+        "Carrot",
+        "Cluster beans",
+        "Coconut",
+        "Colacasia",
+        "Cucumbar(Kheera)",
+        "Drumstick",
+        "Elephant Yam (Suran)",
+        "Ginger(Green)",
+        "Green Chilli",
+        "Little gourd (Kundru)",
+        "Mango (Raw-Ripe)",
+        "Onion",
+        "Potato",
+        "Pumpkin",
+        "Snakeguard",
+        "Tomato"
+      ],
+      "Kuruppanthura": [
+        "Amphophalus",
+        "Banana",
+        "Banana - Green",
+        "Beetroot",
+        "Bhindi(Ladies Finger)",
+        "Bitter gourd",
+        "Brinjal",
+        "Cabbage",
+        "Carrot",
+        "Coconut",
+        "Cowpea(Veg)",
+        "Drumstick",
+        "Ginger(Green)",
+        "Green Chilli",
+        "Little gourd (Kundru)",
+        "Onion",
+        "Pineapple",
+        "Potato",
+        "Pumpkin",
+        "Snakeguard",
+        "Tapioca",
+        "Tomato"
+      ],
+      "Thalayolaparambu": [
+        "Amaranthus",
+        "Ashgourd",
+        "Banana",
+        "Banana - Green",
+        "Beetroot",
+        "Bhindi(Ladies Finger)",
+        "Bitter gourd",
+        "Brinjal",
+        "Cabbage",
+        "Carrot",
+        "Cauliflower",
+        "Cluster beans",
+        "Colacasia",
+        "Cucumbar(Kheera)",
+        "Drumstick",
+        "Elephant Yam (Suran)",
+        "Ginger(Green)",
+        "Green Chilli",
+        "Lemon",
+        "Little gourd (Kundru)",
+        "Mango",
+        "Onion",
+        "Pineapple",
+        "Potato",
+        "Pumpkin",
+        "Snakeguard",
+        "Tapioca",
+        "Tomato"
+      ]
+    },
+    "Kozhikode(Calicut)": {
+      "Mukkom": [
+        "Amaranthus",
+        "Amphophalus",
+        "Apple",
+        "Ashgourd",
+        "Banana",
+        "Banana - Green",
+        "Beetroot",
+        "Bhindi(Ladies Finger)",
+        "Bitter gourd",
+        "Bottle gourd",
+        "Brinjal",
+        "Cabbage",
+        "Carrot",
+        "Coconut Seed",
+        "Cowpea(Veg)",
+        "Cucumbar(Kheera)",
+        "Drumstick",
+        "Ginger(Green)",
+        "Grapes",
+        "Green Chilli",
+        "Onion",
+        "Orange",
+        "Pineapple",
+        "Potato",
+        "Pumpkin",
+        "Snakeguard",
+        "Tomato"
+      ],
+      "Palayam": [
+        "Amaranthus",
+        "Amphophalus",
+        "Ashgourd",
+        "Banana - Green",
+        "Beetroot",
+        "Bhindi(Ladies Finger)",
+        "Bitter gourd",
+        "Bottle gourd",
+        "Brinjal",
+        "Cabbage",
+        "Carrot",
+        "Cauliflower",
+        "Cluster beans",
+        "Coconut Seed",
+        "Cowpea(Veg)",
+        "Cucumbar(Kheera)",
+        "Drumstick",
+        "French Beans (Frasbean)",
+        "Ginger(Green)",
+        "Green Chilli",
+        "Onion",
+        "Potato",
+        "Pumpkin",
+        "Raddish",
+        "Snakeguard",
+        "Tomato"
+      ],
+      "Perambra": [
+        "Amaranthus",
+        "Amphophalus",
+        "Ashgourd",
+        "Beetroot",
+        "Bhindi(Ladies Finger)",
+        "Bitter gourd",
+        "Brinjal",
+        "Cabbage",
+        "Capsicum",
+        "Onion",
+        "Potato",
+        "Pumpkin",
+        "Snakeguard",
+        "Tomato"
+      ],
+      "Kallachi": [
+        "Amaranthus",
+        "Amphophalus",
+        "Ashgourd",
+        "Banana",
+        "Beetroot",
+        "Bitter gourd",
+        "Bottle gourd",
+        "Brinjal",
+        "Cabbage",
+        "Carrot",
+        "Cluster beans",
+        "Cowpea(Veg)",
+        "Drumstick",
+        "Ginger(Green)",
+        "Green Chilli",
+        "Onion",
+        "Potato",
+        "Pumpkin",
+        "Snakeguard",
+        "Tomato"
+      ],
+      "Quilandy": [
+        "Amaranthus",
+        "Amphophalus",
+        "Ashgourd",
+        "Banana - Green",
+        "Beetroot",
+        "Bhindi(Ladies Finger)",
+        "Bitter gourd",
+        "Bottle gourd",
+        "Brinjal",
+        "Cabbage",
+        "Carrot",
+        "Cauliflower",
+        "Cluster beans",
+        "Coriander(Leaves)",
+        "Cowpea(Veg)",
+        "Cucumbar(Kheera)",
+        "Drumstick",
+        "Green Chilli",
+        "Pumpkin",
+        "Snakeguard",
+        "Tomato"
+      ],
+      "Vengeri(Kozhikode)": [
+        "Amaranthus",
+        "Ashgourd",
+        "Bhindi(Ladies Finger)",
+        "Bitter gourd",
+        "Bottle gourd",
+        "Brinjal",
+        "Carrot",
+        "Cowpea(Veg)",
+        "Cucumbar(Kheera)",
+        "Drumstick",
+        "French Beans (Frasbean)",
+        "Pumpkin",
+        "Snakeguard",
+        "Tomato"
+      ]
+    },
+    "Thiruvananthapuram": {
+      "PAPPANCHANI VFPCK": [
+        "Amranthas Red",
+        "Cowpea(Veg)",
+        "Cucumbar(Kheera)",
+        "Snakeguard"
+      ],
+      "Parassala": [
+        "Amaranthus",
+        "Banana",
+        "Beans",
+        "Beetroot",
+        "Bhindi(Ladies Finger)",
+        "Brinjal",
+        "Carrot",
+        "Colacasia",
+        "Cowpea(Veg)",
+        "Cucumbar(Kheera)",
+        "Drumstick",
+        "Elephant Yam (Suran)",
+        "Ginger(Green)",
+        "Green Chilli",
+        "Pumpkin",
+        "Snakeguard"
+      ],
+      "Neyyatinkara": [
+        "Amaranthus",
+        "Amphophalus",
+        "Banana - Green",
+        "Beetroot",
+        "Bhindi(Ladies Finger)",
+        "Bitter gourd",
+        "Brinjal",
+        "Cabbage",
+        "Carrot",
+        "Cluster beans",
+        "Colacasia",
+        "Cucumbar(Kheera)",
+        "Duster Beans",
+        "Ginger(Green)",
+        "Green Chilli",
+        "Pumpkin",
+        "Snakeguard",
+        "Tapioca",
+        "Tomato"
+      ],
+      "KILMANNUR VFPCK": [
+        "Banana"
+      ]
+    },
+    "Kasargod": {
+      "Kasargod": [
+        "Amaranthus",
+        "Arecanut(Betelnut/Supari)",
+        "Banana",
+        "Bhindi(Ladies Finger)",
+        "Cashewnuts",
+        "Copra",
+        "Cowpea(Veg)",
+        "Cucumbar(Kheera)",
+        "Paddy(Dhan)(Common)",
+        "Pepper garbled",
+        "Pumpkin"
+      ]
+    },
+    "Palakad": {
+      "Vaniyamkulam  VFPCK": [
+        "Amphophalus",
+        "Tapioca"
+      ],
+      "Palakkad": [
+        "Amaranthus",
+        "Arhar (Tur/Red Gram)(Whole)",
+        "Ashgourd",
+        "Banana",
+        "Beetroot",
+        "Bengal Gram(Gram)(Whole)",
+        "Bhindi(Ladies Finger)",
+        "Bitter gourd",
+        "Black Gram (Urd Beans)(Whole)",
+        "Bottle gourd",
+        "Brinjal",
+        "Cabbage",
+        "Capsicum",
+        "Carrot",
+        "Cauliflower",
+        "Chili Red",
+        "Cluster beans",
+        "Coconut",
+        "Colacasia",
+        "Cowpea (Lobia/Karamani)",
+        "Cowpea(Veg)",
+        "Cucumbar(Kheera)",
+        "Drumstick",
+        "Elephant Yam (Suran)",
+        "French Beans (Frasbean)",
+        "Garlic",
+        "Ginger(Green)",
+        "Green Avare (W)",
+        "Green Chilli",
+        "Green Gram (Moong)(Whole)",
+        "Green Peas",
+        "Kabuli Chana(Chickpeas-White)",
+        "Lemon",
+        "Lime",
+        "Little gourd (Kundru)",
+        "Mango (Raw-Ripe)",
+        "Onion",
+        "Pineapple",
+        "Potato",
+        "Pumpkin",
+        "Snakeguard",
+        "Sweet Potato",
+        "Tapioca",
+        "Tomato"
+      ],
+      "Pattambi": [
+        "Amaranthus",
+        "Ashgourd",
+        "Banana",
+        "Beetroot",
+        "Bhindi(Ladies Finger)",
+        "Bitter gourd",
+        "Bottle gourd",
+        "Brinjal",
+        "Cabbage",
+        "Carrot",
+        "Cauliflower",
+        "Cluster beans",
+        "Colacasia",
+        "Cowpea(Veg)",
+        "Cucumbar(Kheera)",
+        "Drumstick",
+        "Elephant Yam (Suran)",
+        "French Beans (Frasbean)",
+        "Ginger(Green)",
+        "Green Avare (W)",
+        "Green Chilli",
+        "Lemon",
+        "Lime",
+        "Little gourd (Kundru)",
+        "Mango",
+        "Onion",
+        "Potato",
+        "Pumpkin",
+        "Snakeguard",
+        "Sweet Potato",
+        "Tapioca",
+        "Tomato"
+      ],
+      "Vadakkenchery": [
+        "Ashgourd",
+        "Banana",
+        "Beetroot",
+        "Bhindi(Ladies Finger)"
+      ]
+    },
+    "Kollam": {
+      "Sasthamkotta": [
+        "Brinjal"
+      ],
+      "Kollam": [
+        "Amphophalus",
+        "Banana",
+        "Banana - Green",
+        "Bhindi(Ladies Finger)",
+        "Bitter gourd",
+        "Bottle gourd",
+        "Brinjal",
+        "Colacasia",
+        "Cowpea(Veg)",
+        "Cucumbar(Kheera)",
+        "Ginger(Green)",
+        "Little gourd (Kundru)",
+        "Long Melon(Kakri)",
+        "Pumpkin",
+        "Snakeguard",
+        "Tomato",
+        "Yam (Ratalu)"
+      ]
+    },
+    "Kannur": {
+      "Mattannur  VFPCK": [
+        "Banana"
+      ],
+      "Taliparamba": [
+        "Banana",
+        "Brinjal",
+        "Cucumbar(Kheera)",
+        "Green Chilli",
+        "Onion",
+        "Potato",
+        "Tomato"
+      ],
+      "Chavassery VFPCK": [
+        "Banana - Green"
+      ]
+    },
+    "Idukki": {
+      "KANTHALOOR VFPCK": [
+        "Cabbage"
+      ]
+    },
+    "Pathanamthitta": {
+      "Kuttoor": [
+        "Amaranthus",
+        "Ashgourd",
+        "Banana",
+        "Bhindi(Ladies Finger)",
+        "Bitter gourd",
+        "Brinjal",
+        "Coconut Oil",
+        "Coconut Seed",
+        "Cowpea(Veg)",
+        "Cucumbar(Kheera)",
+        "Elephant Yam (Suran)",
+        "Snakeguard"
+      ]
+    }
+  },
+  "Haryana": {
+    "Gurgaon": {
+      "Gurgaon": [
+        "Apple",
+        "Banana",
+        "Bhindi(Ladies Finger)",
+        "Bitter gourd",
+        "Bottle gourd",
+        "Brinjal",
+        "Cabbage",
+        "Cauliflower",
+        "Mango",
+        "Onion",
+        "Pomegranate",
+        "Potato",
+        "Tomato"
+      ]
+    },
+    "Bhiwani": {
+      "Bhiwani": [
+        "Apple",
+        "Bottle gourd",
+        "Mousambi(Sweet Lime)"
+      ]
+    },
+    "Jind": {
+      "Narwana": [
+        "Apple",
+        "Banana",
+        "Bhindi(Ladies Finger)",
+        "Bottle gourd",
+        "Brinjal",
+        "Cucumbar(Kheera)",
+        "Mango",
+        "Mousambi(Sweet Lime)",
+        "Onion",
+        "Pomegranate",
+        "Potato",
+        "Sponge gourd",
+        "Tomato"
+      ]
+    },
+    "Kaithal": {
+      "Dhand": [
+        "Banana",
+        "Onion",
+        "Potato"
+      ]
+    },
+    "Mahendragarh-Narnaul": {
+      "Narnaul": [
+        "Apple",
+        "Bhindi(Ladies Finger)",
+        "Bitter gourd",
+        "Bottle gourd",
+        "Brinjal",
+        "Cabbage",
+        "Capsicum",
+        "Cauliflower",
+        "Cucumbar(Kheera)",
+        "Ginger(Green)",
+        "Green Chilli",
+        "Lemon",
+        "Mango",
+        "Mango (Raw-Ripe)",
+        "Mousambi(Sweet Lime)",
+        "Onion",
+        "Pear(Marasebu)",
+        "Pointed gourd (Parval)",
+        "Pomegranate",
+        "Potato",
+        "Pumpkin",
+        "Spinach",
+        "Sponge gourd",
+        "Tender Coconut",
+        "Tinda",
+        "Tomato"
+      ]
+    },
+    "Mewat": {
+      "Tauru": [
+        "Banana",
+        "Bhindi(Ladies Finger)",
+        "Bitter gourd",
+        "Bottle gourd",
+        "Brinjal",
+        "Cauliflower",
+        "Chikoos(Sapota)",
+        "Cucumbar(Kheera)",
+        "Ginger(Green)",
+        "Green Chilli",
+        "Lemon",
+        "Mango",
+        "Mousambi(Sweet Lime)",
+        "Tomato"
+      ]
+    },
+    "Yamuna Nagar": {
+      "Mustafabad": [
+        "Bhindi(Ladies Finger)",
+        "Bottle gourd",
+        "Cucumbar(Kheera)",
+        "Onion",
+        "Potato",
+        "Pumpkin",
+        "Ridgeguard(Tori)",
+        "Tomato"
+      ],
+      "Radaur": [
+        "Apple",
+        "Banana",
+        "Bhindi(Ladies Finger)",
+        "Bitter gourd",
+        "Bottle gourd",
+        "Brinjal",
+        "Cabbage",
+        "Cauliflower",
+        "Cucumbar(Kheera)",
+        "Green Chilli",
+        "Lemon",
+        "Mango",
+        "Mousambi(Sweet Lime)",
+        "Onion",
+        "Peas Wet",
+        "Potato",
+        "Pumpkin",
+        "Raddish",
+        "Spinach",
+        "Tomato"
+      ]
+    },
+    "Panchkula": {
+      "New Grain Market , Panchkula": [
+        "Apple",
+        "Onion",
+        "Potato"
+      ]
+    }
+  },
+  "Uttrakhand": {
+    "UdhamSinghNagar": {
+      "Bazpur": [
+        "Banana",
+        "Papaya",
+        "Rice"
+      ],
+      "Kicchha": [
+        "Bitter gourd",
+        "Bottle gourd",
+        "Brinjal",
+        "Green Chilli",
+        "Tomato"
+      ],
+      "Gadarpur": [
+        "Rice"
+      ]
+    },
+    "Haridwar": {
+      "Roorkee": [
+        "Banana",
+        "Bhindi(Ladies Finger)",
+        "Bitter gourd",
+        "Bottle gourd",
+        "Brinjal",
+        "Carrot",
+        "Cauliflower",
+        "Cucumbar(Kheera)",
+        "Mango",
+        "Onion",
+        "Potato",
+        "Pumpkin",
+        "Tomato"
+      ],
+      "Manglaur": [
+        "Banana",
+        "Bhindi(Ladies Finger)",
+        "Bottle gourd",
+        "Cucumbar(Kheera)",
+        "Mango",
+        "Papaya",
+        "Potato"
+      ],
+      "Bhagwanpur(Naveen Mandi Sthal)": [
+        "Bitter gourd",
+        "Brinjal",
+        "Green Chilli",
+        "Jack Fruit",
+        "Mango",
+        "Pumpkin"
+      ],
+      "Lakshar": [
+        "Wheat"
+      ]
+    },
+    "Garhwal (Pauri)": {
+      "Kotadwara": [
+        "Apple",
+        "Bhindi(Ladies Finger)",
+        "Bottle gourd",
+        "Brinjal",
+        "Maize",
+        "Mango",
+        "Mousambi(Sweet Lime)",
+        "Pear(Marasebu)",
+        "Pomegranate",
+        "Pumpkin",
+        "Sponge gourd"
+      ]
+    },
+    "Nanital": {
+      "Ramnagar": [
+        "Bottle gourd",
+        "Brinjal",
+        "Cucumbar(Kheera)",
+        "Green Chilli",
+        "Lemon",
+        "Onion",
+        "Potato",
+        "Sponge gourd",
+        "Tomato"
+      ]
+    },
+    "Dehradoon": {
+      "Chakrata": [
+        "Tomato"
+      ]
+    }
+  },
+  "Gujarat": {
+    "Surat": {
+      "Songadh": [
+        "Bhindi(Ladies Finger)",
+        "Guar"
+      ],
+      "Songadh(Badarpada)": [
+        "Bhindi(Ladies Finger)",
+        "Guar"
+      ],
+      "Mahuva(Anaval)": [
+        "Pointed gourd (Parval)"
+      ],
+      "Songadh(Umrada)": [
+        "Bhindi(Ladies Finger)",
+        "Guar"
+      ],
+      "Surat": [
+        "Banana - Green",
+        "Beetroot"
+      ],
+      "Bardoli(Katod)": [
+        "Bhindi(Ladies Finger)",
+        "Brinjal"
+      ],
+      "Nizar(Kukarmuda)": [
+        "Maize"
+      ],
+      "Nizar": [
+        "Cotton"
+      ],
+      "Nizar(Pumkitalov)": [
+        "Wheat"
+      ]
+    },
+    "Sabarkantha": {
+      "Modasa": [
+        "Bajra(Pearl Millet/Cumbu)",
+        "Maize",
+        "Soyabean",
+        "Wheat"
+      ],
+      "Modasa(Tintoi)": [
+        "Bajra(Pearl Millet/Cumbu)",
+        "Maize",
+        "Wheat"
+      ],
+      "Meghraj": [
+        "Wheat"
+      ]
+    },
+    "Jamnagar": {
+      "Dhrol": [
+        "Arhar (Tur/Red Gram)(Whole)",
+        "Bajra(Pearl Millet/Cumbu)",
+        "Bengal Gram(Gram)(Whole)",
+        "Cummin Seed(Jeera)",
+        "Green Gram (Moong)(Whole)",
+        "Groundnut",
+        "Sesamum(Sesame,Gingelly,Til)",
+        "Wheat"
+      ],
+      "Kalawad": [
+        "Arhar (Tur/Red Gram)(Whole)",
+        "Corriander seed",
+        "Cotton",
+        "Green Gram (Moong)(Whole)",
+        "Ground Nut Seed",
+        "Groundnut",
+        "Sesamum(Sesame,Gingelly,Til)",
+        "Wheat"
+      ],
+      "Jam Jodhpur": [
+        "Arhar (Tur/Red Gram)(Whole)",
+        "Bajra(Pearl Millet/Cumbu)",
+        "Bengal Gram(Gram)(Whole)",
+        "Castor Seed",
+        "Corriander seed",
+        "Cotton",
+        "Green Gram (Moong)(Whole)",
+        "Ground Nut Seed",
+        "Groundnut",
+        "Jowar(Sorghum)",
+        "Methi Seeds",
+        "Sesamum(Sesame,Gingelly,Til)",
+        "Soyabean",
+        "Wheat"
+      ]
+    },
+    "Gandhinagar": {
+      "Mansa(Manas Veg Yard)": [
+        "Bhindi(Ladies Finger)",
+        "Bottle gourd",
+        "Brinjal",
+        "Green Chilli",
+        "Lemon",
+        "Ridgeguard(Tori)",
+        "Tomato"
+      ],
+      "Dehgam": [
+        "Bajra(Pearl Millet/Cumbu)",
+        "Castor Seed",
+        "Guar",
+        "Paddy(Dhan)(Common)",
+        "Wheat"
+      ],
+      "Dehgam(Rekhiyal)": [
+        "Bajra(Pearl Millet/Cumbu)",
+        "Castor Seed",
+        "Guar",
+        "Paddy(Dhan)(Common)",
+        "Wheat"
+      ],
+      "Kalol": [
+        "Bajra(Pearl Millet/Cumbu)",
+        "Castor Seed",
+        "Paddy(Dhan)(Common)",
+        "Wheat"
+      ]
+    },
+    "Amreli": {
+      "Damnagar": [
+        "Bhindi(Ladies Finger)",
+        "Cabbage",
+        "Cauliflower",
+        "Coriander(Leaves)",
+        "Ginger(Green)",
+        "Green Chilli",
+        "Guar",
+        "Lemon",
+        "Tomato"
+      ],
+      "Bagasara": [
+        "Arhar (Tur/Red Gram)(Whole)",
+        "Bengal Gram(Gram)(Whole)",
+        "Corriander seed",
+        "Groundnut",
+        "Sesamum(Sesame,Gingelly,Til)",
+        "Soyabean",
+        "Wheat"
+      ],
+      "Babra": [
+        "Cotton",
+        "Wheat"
+      ],
+      "Rajula": [
+        "Bajra(Pearl Millet/Cumbu)",
+        "Groundnut",
+        "Jowar(Sorghum)",
+        "Kabuli Chana(Chickpeas-White)",
+        "Sesamum(Sesame,Gingelly,Til)",
+        "Wheat"
+      ],
+      "Savarkundla": [
+        "Arhar (Tur/Red Gram)(Whole)",
+        "Bajra(Pearl Millet/Cumbu)",
+        "Bengal Gram(Gram)(Whole)",
+        "Cotton",
+        "Groundnut",
+        "Jowar(Sorghum)",
+        "Sesamum(Sesame,Gingelly,Til)",
+        "Wheat"
+      ]
+    },
+    "Gir Somnath": {
+      "Talalagir": [
+        "Bhindi(Ladies Finger)",
+        "Brinjal",
+        "Cabbage",
+        "Green Chilli",
+        "Guar",
+        "Tomato"
+      ]
+    },
+    "Dahod": {
+      "Devgadhbaria": [
+        "Paddy(Dhan)(Common)"
+      ],
+      "Davgadbaria(Piplod)": [
+        "Paddy(Dhan)(Common)"
+      ],
+      "Dahod(Veg. Market)": [
+        "Bhindi(Ladies Finger)",
+        "Bitter gourd",
+        "Bottle gourd",
+        "Brinjal",
+        "Cabbage",
+        "Carrot",
+        "Cauliflower",
+        "Cluster beans",
+        "Coriander(Leaves)",
+        "Cowpea(Veg)",
+        "Cucumbar(Kheera)",
+        "Drumstick",
+        "Elephant Yam (Suran)",
+        "French Beans (Frasbean)",
+        "Garlic",
+        "Ginger(Green)",
+        "Green Chilli",
+        "Lemon",
+        "Little gourd (Kundru)",
+        "Mint(Pudina)",
+        "Onion",
+        "Onion Green",
+        "Pointed gourd (Parval)",
+        "Potato",
+        "Pumpkin",
+        "Tomato"
+      ],
+      "Zalod(Sanjeli)": [
+        "Bajra(Pearl Millet/Cumbu)",
+        "Maize",
+        "Paddy(Dhan)(Common)",
+        "Wheat"
+      ],
+      "Zalod(Zalod)": [
+        "Bengal Gram(Gram)(Whole)",
+        "Maize",
+        "Paddy(Dhan)(Common)",
+        "Soyabean",
+        "Wheat"
+      ]
+    },
+    "Rajkot": {
+      "Dhoraji": [
+        "Ground Nut Seed",
+        "Sesamum(Sesame,Gingelly,Til)",
+        "Soyabean",
+        "Wheat"
+      ],
+      "Upleta": [
+        "Castor Seed"
+      ],
+      "Gondal(Veg.market Gondal)": [
+        "Apple",
+        "Bhindi(Ladies Finger)",
+        "Brinjal",
+        "Cabbage",
+        "Carrot",
+        "Cauliflower",
+        "Cucumbar(Kheera)",
+        "Green Chilli",
+        "Guar",
+        "Guava",
+        "Lemon",
+        "Papaya",
+        "Potato",
+        "Pumpkin",
+        "Tomato"
+      ],
+      "Jasdan": [
+        "Arhar (Tur/Red Gram)(Whole)",
+        "Bajra(Pearl Millet/Cumbu)",
+        "Beans",
+        "Black Gram (Urd Beans)(Whole)",
+        "Castor Seed",
+        "Cotton",
+        "Cummin Seed(Jeera)",
+        "Garlic",
+        "Green Gram (Moong)(Whole)",
+        "Ground Nut Seed",
+        "Groundnut",
+        "Jowar(Sorghum)",
+        "Mustard",
+        "Sesamum(Sesame,Gingelly,Til)",
+        "Soyabean",
+        "Wheat"
+      ],
+      "Jetpur(Dist.Rajkot)": [
+        "Arhar (Tur/Red Gram)(Whole)",
+        "Bengal Gram(Gram)(Whole)",
+        "Corriander seed",
+        "Cotton",
+        "Garlic",
+        "Green Gram (Moong)(Whole)",
+        "Groundnut",
+        "Sesamum(Sesame,Gingelly,Til)",
+        "Soyabean",
+        "Wheat"
+      ],
+      "Rajkot": [
+        "Arhar (Tur/Red Gram)(Whole)",
+        "Bajra(Pearl Millet/Cumbu)",
+        "Bengal Gram(Gram)(Whole)",
+        "Black Gram (Urd Beans)(Whole)",
+        "Castor Seed",
+        "Corriander seed",
+        "Cotton",
+        "Cummin Seed(Jeera)",
+        "Garlic",
+        "Green Gram (Moong)(Whole)",
+        "Ground Nut Seed",
+        "Groundnut",
+        "Jowar(Sorghum)",
+        "Methi Seeds",
+        "Mustard",
+        "Sesamum(Sesame,Gingelly,Til)",
+        "Wheat"
+      ],
+      "Rajkot(Veg.Sub Yard)": [
+        "Bhindi(Ladies Finger)",
+        "Bottle gourd",
+        "Brinjal",
+        "Cluster beans",
+        "Coriander(Leaves)",
+        "Ginger(Green)",
+        "Green Chilli",
+        "Lemon",
+        "Onion",
+        "Potato",
+        "Tomato"
+      ]
+    },
+    "Mehsana": {
+      "Kadi": [
+        "Ajwan",
+        "Bajra(Pearl Millet/Cumbu)",
+        "Castor Seed",
+        "Mustard",
+        "Wheat"
+      ],
+      "Visnagar": [
+        "Bajra(Pearl Millet/Cumbu)",
+        "Castor Seed",
+        "Jowar(Sorghum)",
+        "Mustard",
+        "Wheat"
+      ]
+    },
+    "Banaskanth": {
+      "Diyodar": [
+        "Bajra(Pearl Millet/Cumbu)"
+      ],
+      "Deesa(Deesa Veg Yard)": [
+        "Banana",
+        "Bhindi(Ladies Finger)",
+        "Bottle gourd",
+        "Brinjal",
+        "Cabbage",
+        "Cauliflower",
+        "Chikoos(Sapota)",
+        "Coriander(Leaves)",
+        "Cucumbar(Kheera)",
+        "Ginger(Green)",
+        "Gram Raw(Chholia)",
+        "Green Chilli",
+        "Guar",
+        "Lemon",
+        "Mousambi(Sweet Lime)",
+        "Onion",
+        "Onion Green",
+        "Papaya",
+        "Pineapple",
+        "Pointed gourd (Parval)",
+        "Pomegranate",
+        "Potato",
+        "Ridgeguard(Tori)",
+        "Tomato"
+      ],
+      "Dhanera": [
+        "Bajra(Pearl Millet/Cumbu)",
+        "Castor Seed",
+        "Cummin Seed(Jeera)",
+        "Guar Seed(Cluster Beans Seed)",
+        "Rajgir",
+        "Suva (Dill Seed)",
+        "Wheat"
+      ],
+      "Vadgam": [
+        "Bajra(Pearl Millet/Cumbu)",
+        "Groundnut",
+        "Wheat"
+      ]
+    },
+    "Chhota Udaipur": {
+      "Bodeliu": [
+        "Cotton",
+        "Groundnut",
+        "Maize"
+      ]
+    },
+    "Narmada": {
+      "Rajpipla": [
+        "Banana"
+      ]
+    },
+    "Anand": {
+      "Anand(Veg,Yard,Anand)": [
+        "Bhindi(Ladies Finger)",
+        "Bottle gourd",
+        "Brinjal",
+        "Cabbage",
+        "Cauliflower",
+        "Green Chilli",
+        "Onion",
+        "Potato",
+        "Tomato"
+      ]
+    },
+    "Botad": {
+      "Botad": [
+        "Arhar (Tur/Red Gram)(Whole)",
+        "Bajra(Pearl Millet/Cumbu)",
+        "Bengal Gram(Gram)(Whole)",
+        "Castor Seed",
+        "Corriander seed",
+        "Cummin Seed(Jeera)",
+        "Jowar(Sorghum)",
+        "Mustard",
+        "Sesamum(Sesame,Gingelly,Til)",
+        "Soanf",
+        "Wheat"
+      ],
+      "Botad(Haddad)": [
+        "Cotton"
+      ]
+    },
+    "Devbhumi Dwarka": {
+      "Bhanvad": [
+        "Groundnut",
+        "Sesamum(Sesame,Gingelly,Til)",
+        "Soyabean",
+        "Wheat"
+      ]
+    },
+    "Kachchh": {
+      "Anjar": [
+        "Castor Seed",
+        "Cummin Seed(Jeera)",
+        "Guar Seed(Cluster Beans Seed)",
+        "Sesamum(Sesame,Gingelly,Til)"
+      ],
+      "Rapar": [
+        "Bajra(Pearl Millet/Cumbu)",
+        "Cummin Seed(Jeera)",
+        "Sesamum(Sesame,Gingelly,Til)"
+      ]
+    },
+    "Morbi": {
+      "Halvad": [
+        "Ajwan",
+        "Castor Seed",
+        "Corriander seed",
+        "Cummin Seed(Jeera)",
+        "Groundnut",
+        "Guar Seed(Cluster Beans Seed)",
+        "Mustard",
+        "Sesamum(Sesame,Gingelly,Til)",
+        "Soanf",
+        "Wheat"
+      ],
+      "Vankaner": [
+        "Bajra(Pearl Millet/Cumbu)",
+        "Bengal Gram(Gram)(Whole)",
+        "Cotton",
+        "Cummin Seed(Jeera)",
+        "Jowar(Sorghum)",
+        "Sesamum(Sesame,Gingelly,Til)",
+        "Soanf",
+        "Wheat"
+      ]
+    },
+    "Navsari": {
+      "Bilimora": [
+        "Bhindi(Ladies Finger)",
+        "Bottle gourd",
+        "Brinjal",
+        "Cabbage",
+        "Cauliflower",
+        "Green Chilli",
+        "Onion",
+        "Potato",
+        "Tomato"
+      ],
+      "Navsari": [
+        "Banana",
+        "Bhindi(Ladies Finger)",
+        "Bottle gourd",
+        "Brinjal",
+        "Cabbage",
+        "Capsicum",
+        "Cauliflower",
+        "Cluster beans",
+        "Coriander(Leaves)",
+        "Cowpea(Veg)",
+        "Green Chilli",
+        "Lemon",
+        "Methi(Leaves)",
+        "Pointed gourd (Parval)",
+        "Potato",
+        "Tomato"
+      ]
+    },
+    "Surendranagar": {
+      "Dhragradhra": [
+        "Bajra(Pearl Millet/Cumbu)",
+        "Castor Seed",
+        "Guar Seed(Cluster Beans Seed)",
+        "Mustard",
+        "Sesamum(Sesame,Gingelly,Til)",
+        "Soanf"
+      ],
+      "Vadhvan": [
+        "Amaranthus",
+        "Banana",
+        "Bhindi(Ladies Finger)",
+        "Bitter gourd",
+        "Bottle gourd",
+        "Brinjal",
+        "Cabbage",
+        "Carrot",
+        "Cauliflower",
+        "Coriander(Leaves)",
+        "Cucumbar(Kheera)",
+        "Elephant Yam (Suran)",
+        "Garlic",
+        "Green Chilli",
+        "Guar",
+        "Lemon",
+        "Methi(Leaves)",
+        "Onion Green",
+        "Peas Wet",
+        "Potato",
+        "Raddish",
+        "Ridgeguard(Tori)",
+        "Spinach",
+        "Tinda",
+        "Tomato"
+      ],
+      "Dasada Patadi": [
+        "Castor Seed",
+        "Cummin Seed(Jeera)"
+      ]
+    },
+    "Vadodara(Baroda)": {
+      "Padra": [
+        "Bhindi(Ladies Finger)",
+        "Bitter gourd",
+        "Bottle gourd",
+        "Brinjal",
+        "Cabbage",
+        "Cauliflower",
+        "Cluster beans",
+        "Coriander(Leaves)",
+        "Cowpea(Veg)",
+        "Cucumbar(Kheera)",
+        "Drumstick",
+        "Ginger(Green)",
+        "Green Chilli",
+        "Kartali (Kantola)",
+        "Lemon",
+        "Little gourd (Kundru)",
+        "Onion",
+        "Pointed gourd (Parval)",
+        "Potato",
+        "Pumpkin",
+        "Spinach",
+        "Sponge gourd",
+        "Tomato"
+      ]
+    },
+    "Junagarh": {
+      "Bhesan": [
+        "Bengal Gram(Gram)(Whole)",
+        "Cotton",
+        "Sesamum(Sesame,Gingelly,Til)",
+        "Soyabean",
+        "Wheat"
+      ]
+    },
+    "Patan": {
+      "Chansama": [
+        "Ajwan",
+        "Castor Seed"
+      ],
+      "Sami": [
+        "Cummin Seed(Jeera)"
+      ]
+    },
+    "Valsad": {
+      "Valsad": [
+        "Banana"
+      ]
+    },
+    "Ahmedabad": {
+      "Sanad": [
+        "Paddy(Dhan)(Common)",
+        "Wheat"
+      ]
+    }
+  }
+}
