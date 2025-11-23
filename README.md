@@ -75,9 +75,13 @@ Getting Started
 ### Installation
 
 ```bash
+// for linux
+sudo apt update
+sudo apt install python3-pip
+//Same commands for linux and windows
 git clone https://github.com/005-adarsh-pandey/AgroVista/
 cd AgroVista
-pip install flask scikit-learn pandas numpy matplotlib joblib requests xarray
+pip install --break-system-packages -r requirements.txt
 cd Website
 python app.py
 ```
