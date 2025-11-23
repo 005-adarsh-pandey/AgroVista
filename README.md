@@ -77,7 +77,7 @@ Getting Started
 ```bash
 git clone https://github.com/005-adarsh-pandey/AgroVista/
 cd AgroVista
-pip install flask scikit-learn pandas numpy matplotlib joblib requests
+pip install flask scikit-learn pandas numpy matplotlib joblib requests xarray
 cd Website
 python app.py
 ```
