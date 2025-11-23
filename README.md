@@ -78,6 +78,7 @@ Getting Started
 // for linux
 sudo apt update
 sudo apt install python3-pip
+chmod 777 -R /AgroVista/Website/static/images/
 //Same commands for linux and windows
 git clone https://github.com/005-adarsh-pandey/AgroVista/
 cd AgroVista
