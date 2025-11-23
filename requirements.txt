@@ -7,3 +7,4 @@ joblib
 requests
 xarray
 cdsapi
+netcdf4
